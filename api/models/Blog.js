@@ -9,7 +9,7 @@
 
 module.exports = (function(){
 
-    var tableName = 'users';
+    var tableName = 'blog_posts';
 
     var attributes = {
         name: {

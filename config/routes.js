@@ -22,6 +22,8 @@
 
 module.exports.routes = {
 
-    '/': 'HomeController.resume'
+    '/': 'HomeController.index',
+
+    '/resume/:category': 'HomeController.resume'
 
 };

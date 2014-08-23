@@ -9,8 +9,8 @@ var paths = {
 	target: '.tmp/public',
 	assets: [
 		'assets/**',
-		'!assets/js/angular/*.js',
-		'!assets/js/angular/*/*.js',
+		// '!assets/js/angular/*.js',
+		// '!assets/js/angular/*/*.js',
 		'!assets/styles/*.css',
 		'!assets/styles/*.less'
 	],
@@ -20,11 +20,21 @@ var paths = {
 	]
 };
 
-var cssFiles = [
-	'assets/js/vendor/angular-loading-bar/build/loading-bar.min.css',
-	'assets/js/vendor/toastr/toastr.min.css',
-	'assets/styles/style.less'
-];
+var cssFiles = {
+	screen: [
+		'assets/js/vendor/bootstrap2/css/bootstrap.css',
+		'assets/js/vendor/bootstrap2/css/bootstrap-responsive.css',
+		'assets/js/vendor/angular-loading-bar/build/loading-bar.min.css',
+		'assets/js/vendor/jquery-prettyPhoto/css/prettyPhoto.css',
+		'assets/js/vendor/toastr/toastr.min.css',
+		'assets/styles/glyphicons.css',
+		'assets/styles/style.css',
+		'assets/styles/skin.less'
+	],
+	print: [
+		'assets/styles/print.css'
+	]
+};
 
 gulp.task('uglifyJs', function () {
 	rjs({
@@ -33,14 +43,19 @@ gulp.task('uglifyJs', function () {
 		mainConfigFile: "assets/js/angular/Home.js",
 		out: "home.min.js"
 	})
-	.pipe(uglifyJs())
+	// .pipe(uglifyJs())
 	.pipe(gulp.dest(paths.target + '/js/angular'));
 });
 
 gulp.task('minifyCSS', function () {
-	gulp.src(cssFiles)
+	gulp.src(cssFiles.screen)
 		.pipe(concat('style.min.less'))
 		.pipe(less())
+		.pipe(minifyCSS())
+		.pipe(gulp.dest(paths.target + '/styles'));
+
+	gulp.src(cssFiles.print)
+		.pipe(concat('print.min.css'))
 		.pipe(minifyCSS())
 		.pipe(gulp.dest(paths.target + '/styles'));
 });
