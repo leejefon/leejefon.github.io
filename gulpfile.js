@@ -26,6 +26,7 @@ var cssFiles = {
 		'assets/js/vendor/bootstrap2/css/bootstrap-responsive.css',
 		'assets/js/vendor/angular-loading-bar/build/loading-bar.min.css',
 		'assets/js/vendor/jquery-prettyPhoto/css/prettyPhoto.css',
+		'assets/js/vendor/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css',
 		'assets/js/vendor/toastr/toastr.min.css',
 		'assets/styles/glyphicons.css',
 		'assets/styles/style.css',

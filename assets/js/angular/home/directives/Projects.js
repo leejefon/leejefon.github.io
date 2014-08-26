@@ -5,7 +5,7 @@
  * @created     :: 2014/08/20
  */
 
-define(['home/directives', 'jqueryPrettyPhoto'], function (homeDirectives) {
+define(['home/directives', 'jqueryPrettyPhoto', 'jqueryIsotope'], function (homeDirectives) {
     'use strict';
 
     return homeDirectives
@@ -52,14 +52,14 @@ define(['home/directives', 'jqueryPrettyPhoto'], function (homeDirectives) {
                         $('.blogitem-hoverinfo, .portfolioitem-hoverinfo', this).stop(true, true).fadeOut('200', 'easeInOutCubic');
                     });
 
-                    // var $container = $('#portfolio-items');
-                    // // initialize isotope
-                    // $container.imagesLoaded( function(){
-                    //     $container.isotope({
-                    //          itemSelector : '.portfolioitem',
-                    //          layoutMode : 'fitRows'
-                    //     });
-                    // });
+                    //isotope filtering
+                    var $container = $('#portfolio-items');
+                    $container.imagesLoaded( function(){
+                        $container.isotope({
+                             itemSelector : '.portfolioitem',
+                             layoutMode : 'fitRows'
+                        });
+                    });
 
                     // filter items when filter link is clicked
                     $('#portfolio-filters a').click(function(){
@@ -68,6 +68,10 @@ define(['home/directives', 'jqueryPrettyPhoto'], function (homeDirectives) {
                           $container.isotope({ filter: selector });
                           $(this).parent('li').addClass('active');
                           return false;
+                    });
+
+                    $("a[rel^='prettyPhoto']").prettyPhoto({
+                        social_tools: ''
                     });
                 }
             };

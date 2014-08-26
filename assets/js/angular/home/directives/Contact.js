@@ -5,7 +5,7 @@
  * @created     :: 2014/08/20
  */
 
-define(['home/directives'], function (homeDirectives) {
+define(['home/directives', 'bootstrapWysihtml5'], function (homeDirectives) {
     'use strict';
 
     return homeDirectives
@@ -19,7 +19,9 @@ define(['home/directives'], function (homeDirectives) {
 
                 }],
                 link: function (scope) {
-
+                    $('textarea').wysihtml5({
+                        image: false
+                    });
                 }
             };
         }]);

@@ -10,9 +10,11 @@ require.config({
     paths: {
         jquery: '../vendor/jquery/dist/jquery.min',
         jqueryEasing: '../vendor/jquery-easing/jquery.easing.min',
-        jqueryIsotope: '../jquery.isotope.min',
+        jqueryIsotope: '../vendor/jquery-isotope/jquery.isotope.min',
         jqueryPrettyPhoto: '../vendor/jquery-prettyPhoto/js/jquery.prettyPhoto',
+        wysihtml5: '../vendor/wysihtml5/dist/wysihtml5-0.3.0.min',
         bootstrap: '../vendor/bootstrap2/js/bootstrap.min',
+        bootstrapWysihtml5: '../vendor/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.min',
 
         angular: '../vendor/angular/angular.min',
         angularRoute: '../vendor/angular-route/angular-route.min',
@@ -23,6 +25,8 @@ require.config({
         jqueryIsotope: ['jquery'],
         jqueryPrettyPhoto: ['jquery'],
         bootstrap: ['jquery'],
+        bootstrapWysihtml5: ['wysihtml5'],
+
         angular: { exports: 'angular', deps: ['jquery'] },
         angularRoute: ['angular'],
         angularCookies: ['angular'],

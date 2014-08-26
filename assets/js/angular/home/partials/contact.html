@@ -1,37 +1,77 @@
 <div class="section noprint" id="contact">
     <h2 class="section-title"><span class="glyphicons message_flag"><i></i></span>Contact<a href="#phone-navbar" class="top visible-phone"><span class="glyphicons white up_arrow"><i></i></span></a></h2>
 
-    <form method="post" action="#contact" class="form-horizontal">
-        <fieldset>
-            <legend>Send me a message using the form below</legend>
+    <form action="/contact" id="ContactContactForm" method="post" accept-charset="utf-8">
+        <div class="row">
+            <div class="span4">
+                <div class="input text required">
+                    <label for="ContactName"></label>
+                    <div class="input-prepend">
+                        <span class="add-on"><span class="glyphicons user"><i></i></span></span>
+                        <input name="data[Contact][name]" placeholder="Name" maxlength="50" type="text" id="ContactName" required="required" />
+                    </div>
+                </div>
 
-            <div class="control-group">
-                <label class="control-label" for="form-subject">Subject</label>
-                <div class="controls">
-                    <div class="input-append">
-                        <input type="text" placeholder="Email Subject" id="form-subject" name="subject" class="input-xlarge" value="">
-                        <span class="add-on"><span class="glyphicons circle_question_mark"><i></i></span></span>
+                <div class="input email required">
+                    <label for="ContactEmail"></label>
+                    <div class="input-prepend">
+                        <span class="add-on"><span class="glyphicons envelope"><i></i></span></span>
+                        <input name="data[Contact][email]" placeholder="E-mail" type="email" id="ContactEmail" required="required" />
+                    </div>
+                </div>
+
+                <div class="input text">
+                    <label for="ContactWebsite"></label>
+                    <div class="input-prepend">
+                        <span class="add-on"><span class="glyphicons globe"><i></i></span></span>
+                        <input name="data[Contact][website]" placeholder="Website" type="text" id="ContactWebsite" />
                     </div>
                 </div>
             </div>
 
-            <div class="control-group">
-                <label class="control-label" for="form-message">Message</label>
-                <div class="controls">
-                    <div class="input-append">
-                        <textarea rows="6" placeholder="Your message" id="form-message" name="message" class="input-xlarge"></textarea>
-                        <span class="add-on"><span class="glyphicons pen"><i></i></span></span>
-                    </div>
+            <div class='span5'>
+                <div class="input textarea">
+                    <label for="ContactMessage"></label>
+                    <textarea name="data[Contact][message]" placeholder="Type your messages here..." class="span5" rows="8" cols="30" id="ContactMessage"></textarea>
+                </div>
+
+                <div class="submit">
+                    <input class="btn btn-success btn-large" type="submit" value="Send"/>
                 </div>
             </div>
-
-            <div class="control-group">
-                <div class="controls">
-                    <button type="submit" class="btn btn-primary input-medium" name="submit">Submit</button>
-                </div>
-            </div>
-
-
-        </fieldset>
+        </div>
     </form>
+
+    <style type="text/css">
+        #ContactContactForm .input {
+        	padding-left: 3px;
+        	font-size: 18px;
+        }
+
+        input[type=text], input[type=email] {
+        	height: 36px;
+        	width: 248px;
+        	font-size: 20px;
+        	padding: 4px 10px;
+        }
+
+        .input-prepend .add-on {
+            padding: 12px;
+        	width: 20px;
+        	font-size: 20px;
+        }
+
+        .add-on .glyphicons {
+            padding: 12px 3px 5px 15px;
+        }
+
+        .add-on .glyphicons i:before {
+            font-size: 20px;
+        }
+
+        textarea {
+        	font-size: 105%;
+        	padding: 12px;
+        }
+    </style>
 </div>

@@ -16,6 +16,18 @@ module.exports = (function(){
             type: 'string',
             required: true
         },
+        experiences: {
+            type: 'array'
+        },
+        education: {
+            type: 'array'
+        },
+        certifications: {
+            type: 'array'
+        },
+        social: {
+            type: 'array'
+        }
     };
 
     if (process.env.NODE_ENV === 'development') {
