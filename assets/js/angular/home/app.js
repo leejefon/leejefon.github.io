@@ -13,11 +13,14 @@ define([
     'home/directives/Contact',
     'home/directives/Education',
     'home/directives/Experiences',
-    'home/directives/Projects'
+    'home/directives/Projects',
+    'home/filters/Slug',
+    'home/filters/Html'
 ], function (angular) {
     'use strict';
 
     return angular.module('Home', [
-        'Home.directives'
+        'Home.directives',
+        'Home.filters'
     ]);
 });

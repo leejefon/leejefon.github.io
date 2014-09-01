@@ -5,18 +5,20 @@
  * @created     :: 2014/08/20
  */
 
-define(['home/directives', 'jqueryPrettyPhoto', 'jqueryIsotope'], function (homeDirectives) {
+define(['home/directives', 'home/services/Resume', 'jqueryPrettyPhoto', 'jqueryIsotope'], function (homeDirectives) {
     'use strict';
 
     return homeDirectives
 
-        .directive('projects', [function () {
+        .directive('projects', ['Resume', function (Resume) {
             return {
                 restrict: 'E',
                 replace: true,
                 templateUrl: '/js/angular/home/partials/projects.html',
                 controller: ['$scope', function ($scope) {
-
+                    Resume.projects(function (err, data) {
+                        $scope.projects = data.data;
+                    });
                 }],
                 link: function (scope) {
                     //Showing portfolio items

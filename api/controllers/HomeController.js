@@ -11,17 +11,29 @@ module.exports = (function(){
 
 	function index (req, res) {
 		return res.view({
-			
+
 		});
 	}
 
 	function resume (req, res) {
-		return res.view();
+		var category = req.param('category');
+
+		ResumeService.get(category, function (err, data) {
+			return res.json({
+				status: 'OK',
+				data: data
+			});
+		});
+	}
+
+	function contact (req, res) {
+
 	}
 
     return {
 		index: index,
         resume: resume,
+		contact: contact,
 
         _config: {}
     };

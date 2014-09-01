@@ -1,16 +1,22 @@
 <div class="section first-section" id="about">
     <div class="row author">
         <div class="span3">
-            <img class="img-rounded" src="https://gravatar.com/avatar/9116994a95b11f219055306520647168?s=300" alt="Jeff Lee" />
+            <img class="img-rounded" src="{{ profile.avatar }}" alt="{{ profile.name }}" />
         </div>
         <div class="span6">
-            <h1>Jeff Lee</h1><br/>
-            <h2 class="primary-color">Software Developer</h2>
+            <h1>{{ profile.name }}</h1><br />
+            <h2 class="primary-color">{{ profile.bio.title }}</h2>
+
+            <ul id="social">
+                <li ng-repeat="social in profile.social">
+                    <a href="{{ social.url }}" title="{{ social.name }}"><span class="glyphicons {{ social.icon }}"><i></i></span></a>
+                </li>
+            </ul>
         </div>
     </div>
 
     <div class="well">
-        <h3>I am Senior UX designer @ <a href="#">Company.com</a></h3>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque auctor blandit eros vel scelerisque. Donec mi eros, eleifend et ornare tempus, bibendum a metus. Proin nec nisi et augue sodales gravida. Sed fermentum molestie tortor sit amet pulvinar. Nam commodo pretium adipiscing. Nullam vestibulum fringilla lectus, ut vulputate neque laoreet sit amet.</p>
+        <h3>I am the {{ profile.bio.current.position }} @ <a href="{{ profile.bio.current.url }}">{{ profile.bio.current.employer }}</a></h3>
+        <p class="lead">{{ profile.bio.current.details }}</p>
     </div>
 </div>

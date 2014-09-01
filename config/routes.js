@@ -24,6 +24,10 @@ module.exports.routes = {
 
     '/': 'HomeController.index',
 
-    '/resume/:category': 'HomeController.resume'
+    '/resume/:category': 'HomeController.resume',
+
+    '/blog/:slug': 'BlogController.find',
+
+    '/contact': 'HomeController.contact'
 
 };

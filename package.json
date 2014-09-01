@@ -24,7 +24,9 @@
     "nodetime": "^0.8.15",
     "rc": "~0.5.0",
     "sails": "~0.10.4",
-    "sails-mongo": "^0.10.4"
+    "sails-mongo": "^0.10.4",
+    "underscore": "^1.7.0",
+    "validator": "^3.17.1"
   },
   "devDependencies": {
     "frisby": "^0.8.1",

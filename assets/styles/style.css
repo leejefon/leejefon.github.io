@@ -49,6 +49,9 @@ hr {border-top: 1px solid #eee;border-bottom: 1px solid #fcfcfc;}
 .infoline {padding: 0; overflow: hidden; border-bottom: 1px solid #eee; border-top: 1px solid #fcfcfc; padding-top: 15px; padding-bottom: 15px;}
 .infoline.first {border-top: none!important;}
 .infoline.last {border-bottom: none!important;}
+#social {list-style: none; margin-left: 0;}
+#social li {display: inline-block; width: 50px;}
+#social i:before {font-size: 36px;}
 
 /* helpers */
 .clear {display: block; clear: both; width: 100%; height: 0; line-height: 0;}
@@ -226,7 +229,6 @@ body.dark {color:#eee; background: #1b1b1b;}
 	.portfolioitem h3 {margin-bottom: 11px;}
 	.blogitem .blogitem-actions, .portfolioitem .portfolioitem-actions {margin-top: 20px;}
 	#footer {padding-top: 10px;}
-
 }
 
 /* Portrait tablet to landscape and desktop */

@@ -12,17 +12,25 @@ define(['home/services'], function (homeServices) {
 
         .factory('Resume', ['$http', function ($http) {
             return {
-                info: function () {
-
+                profile: function (cb) {
+                    $http.get('/resume/profile').success(function (data) {
+                        cb(null, data);
+                    });
                 },
-                experiences: function () {
-
+                experiences: function (cb) {
+                    $http.get('/resume/experiences').success(function (data) {
+                        cb(null, data);
+                    });
                 },
-                education: function () {
-
+                education: function (cb) {
+                    $http.get('/resume/education').success(function (data) {
+                        cb(null, data);
+                    });
                 },
-                projects: function () {
-
+                projects: function (cb) {
+                    $http.get('/resume/projects').success(function (data) {
+                        cb(null, data);
+                    });
                 }
             };
         }]);
