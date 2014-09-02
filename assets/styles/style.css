@@ -50,7 +50,7 @@ hr {border-top: 1px solid #eee;border-bottom: 1px solid #fcfcfc;}
 .infoline.first {border-top: none!important;}
 .infoline.last {border-bottom: none!important;}
 #social {list-style: none; margin-left: 0;}
-#social li {display: inline-block; width: 50px;}
+#social li {display: inline-block; width: 50px; height: 40px;}
 #social i:before {font-size: 36px;}
 
 /* helpers */
@@ -284,7 +284,8 @@ body.dark {color:#eee; background: #1b1b1b;}
 	.timeline-item-trigger span {display: inline-block; margin-top: 0;}
 	.timeline-item-trigger span i:before {line-height: 12px;}
 	.timeline {background-position: center center;}
-	.timeline-item-content h3 {font-size: 20px;}
+	.timeline-item-content h3 {font-size: 20px; text-align: center;}
+    .timeline-item-content h4 {text-align: center;}
 	.timeline-item-date, .timeline-item-content, .timeline-item-trigger {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -295,7 +296,7 @@ body.dark {color:#eee; background: #1b1b1b;}
 	text-align: center;
 	margin: 5px 0;
 	}
-	.timeline-item-content {margin-bottom: 0; padding: 5px 20px;}
+	.timeline-item-content {margin-bottom: 0; padding: 5px 20px; text-align: left;}
 	.timeline-item-trigger {padding-top: 0; margin: 10px 0 15px;}
 	.timeline-item-date {background:#fff; padding: 5px 0; margin-top: 0;}
 	.dark .timeline-item-date {background:#1b1b1b;}

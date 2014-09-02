@@ -10,9 +10,7 @@
 module.exports = (function(){
 
 	function index (req, res) {
-		return res.view({
-
-		});
+		return res.view();
 	}
 
 	function resume (req, res) {
@@ -26,14 +24,24 @@ module.exports = (function(){
 		});
 	}
 
-	function contact (req, res) {
-
+	function sendmail (req, res) {
+		EmailService.sendContactEmail({
+			name: req.body.name,
+			email: req.body.email,
+			website: req.body.website,
+			message: req.body.message
+		}, function (err, data) {
+			return res.json({
+				status: 'OK',
+				data: data
+			});
+		});
 	}
 
     return {
 		index: index,
         resume: resume,
-		contact: contact,
+		sendmail: sendmail,
 
         _config: {}
     };

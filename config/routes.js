@@ -22,12 +22,10 @@
 
 module.exports.routes = {
 
-    '/': 'HomeController.index',
+    'GET  /'                : 'HomeController.index',
+    'GET  /resume/:category': 'HomeController.resume',
+    'POST /sendmail'        : 'HomeController.sendmail'
 
-    '/resume/:category': 'HomeController.resume',
-
-    '/blog/:slug': 'BlogController.find',
-
-    '/contact': 'HomeController.contact'
+    // 'GET /blog/:slug': 'BlogController.find',
 
 };

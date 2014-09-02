@@ -9,7 +9,7 @@
             <div class="timeline-item-content">
                 <h3 class="timeline-item-title" data-toggle="collapse" data-target="#{{ e.degree | slug }}">{{ e.school }}</h3>
                 <div class="collapse" id="{{ e.degree | slug }}">
-                    <p><small class="muted">from {{ e.startTime }} to {{ e.endTime }}</small></p>
+                    <!-- <p><small class="muted">from {{ e.startTime }} to {{ e.endTime }}</small></p> -->
                     <h4 class="media-heading primary-color" ng-bind-html="e.degree | html"></h4>
                     <ul>
                         <li ng-repeat="desc in e.details">
