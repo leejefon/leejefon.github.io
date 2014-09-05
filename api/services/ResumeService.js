@@ -16,14 +16,8 @@ module.exports = (function () {
     function get (category, cb) {
         if (category === 'profile') {
             _getProfile(cb);
-        } else if (category === 'experiences') {
-            _getExperiences(cb);
-        } else if (category === 'education') {
-            _getEducation(cb);
-        } else if (category === 'projects') {
-            _getEducation(cb);
         } else {
-            cb('No such category');
+            _getCategory(category, cb);
         }
     }
 
@@ -38,21 +32,9 @@ module.exports = (function () {
         });
     }
 
-    function _getExperiences (cb) {
+    function _getCategory (category, cb) {
         Resume.findOneByName(resumeOwner, function (err, data) {
-            cb(null, data.experiences);
-        });
-    }
-
-    function _getEducation (cb) {
-        Resume.findOneByName(resumeOwner, function (err, data) {
-            cb(null, data.education);
-        });
-    }
-
-    function _getProjects (cb) {
-        Resume.findOneByName(resumeOwner, function (err, data) {
-            cb(null, data.projects);
+            cb(null, data[category]);
         });
     }
 

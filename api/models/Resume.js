@@ -16,10 +16,19 @@ module.exports = (function(){
             type: 'string',
             required: true
         },
+        avatar: {
+            type: 'string'
+        },
+        bio: {
+            type: 'json'
+        },
         experiences: {
             type: 'array'
         },
         education: {
+            type: 'array'
+        },
+        projects: {
             type: 'array'
         },
         certifications: {

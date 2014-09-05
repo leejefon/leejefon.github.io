@@ -19,6 +19,7 @@ require.config({
         angular: '../vendor/angular/angular.min',
         angularRoute: '../vendor/angular-route/angular-route.min',
         angularCookies: '../vendor/angular-cookies/angular-cookies.min',
+        angularLoadingBar: '../vendor/angular-loading-bar/build/loading-bar'
     },
     shim: {
         jqueryEasing: ['jquery'],
@@ -30,6 +31,7 @@ require.config({
         angular: { exports: 'angular', deps: ['jquery'] },
         angularRoute: ['angular'],
         angularCookies: ['angular'],
+        angularLoadingBar: ['angular']
     }
 });
 

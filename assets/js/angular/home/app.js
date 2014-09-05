@@ -7,6 +7,7 @@
 
 define([
     'angular',
+    'angularLoadingBar',
     'home/directives',
     'home/directives/About',
     'home/directives/Blog',
@@ -20,6 +21,7 @@ define([
     'use strict';
 
     return angular.module('Home', [
+        'chieffancypants.loadingBar',
         'Home.directives',
         'Home.filters'
     ]);

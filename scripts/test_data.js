@@ -109,6 +109,11 @@ module.exports = {
                     ]
                 }
             ],
+            projects: [
+                {
+                    name: 'TestLegends Build'
+                }
+            ],
             certifications: [
                 {
                     name: 'Cisco Certified Network Associate (CCNA)'
@@ -157,6 +162,9 @@ module.exports = {
                 },
                 {
                     name: 'IBM DB2 Essential Training I Completion'
+                },
+                {
+                    name: 'Japanese Language Proficiency Test (JLPT) N3'
                 }
             ],
             social: [
