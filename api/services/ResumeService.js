@@ -7,8 +7,6 @@
  * @created     :: 2014/08/26
  */
 
-var validator = require('validator');
-
 module.exports = (function () {
 
     var resumeOwner = 'Jeff Lee';

@@ -324,6 +324,7 @@ body.dark {color:#eee; background: #1b1b1b;}
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+    .timeline-item-logo { display: none; }
 	.blogitem .blogitem-hoverinfo, .portfolioitem .portfolioitem-hoverinfo {padding: 20px;}
 	#blog-items, #portfolio-items {margin: 0 -4% 0 -1%;}
 	.blogitem, .portfolioitem {width: 45%; height: auto; float: left; margin: 0 2% 4% 2%;}

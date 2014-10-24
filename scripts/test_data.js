@@ -111,7 +111,20 @@ module.exports = {
             ],
             projects: [
                 {
-                    name: 'TestLegends Build'
+                    name: 'URLy',
+                    tagline: 'Yet another URL shortener',
+                    category: '',
+                    thumbnail: '',
+                    image: '',
+                    details: ''
+                },
+                {
+                    name: 'GitStar It!',
+                    tagline: 'Organize GitHub starred projects in a easier way',
+                    category: '',
+                    thumbnail: '',
+                    image: '',
+                    details: ''
                 }
             ],
             certifications: [

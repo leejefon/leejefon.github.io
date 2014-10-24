@@ -15,6 +15,7 @@ require.config({
         wysihtml5: '../vendor/wysihtml5/dist/wysihtml5-0.3.0.min',
         bootstrap: '../vendor/bootstrap2/js/bootstrap.min',
         bootstrapWysihtml5: '../vendor/bootstrap-wysihtml5/dist/bootstrap-wysihtml5-0.0.2.min',
+        toastr: '../vendor/toastr/toastr',
 
         angular: '../vendor/angular/angular.min',
         angularRoute: '../vendor/angular-route/angular-route.min',

@@ -7,7 +7,7 @@
             <div class="timeline-item-trigger"><span class="glyphicons white circle_plus" data-toggle="collapse" data-target="#{{ e.employer | slug }}"><i></i></span></div>
             <div class="timeline-arrow"><i></i></div>
             <div class="timeline-item-content">
-                <img src="/images/logos/{{ e.employer | slug }}.png" alt="" class="timeline-item-logo"/>
+                <img ng-src="/images/logos/{{ e.employer | slug }}.png" alt="" class="timeline-item-logo"/>
                 <h3 class="timeline-item-title" data-toggle="collapse" data-target="#{{ e.employer | slug }}">
                     {{ e.position }} @ {{ e.employer }}
                 </h3>

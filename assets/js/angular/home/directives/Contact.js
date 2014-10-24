@@ -5,7 +5,7 @@
  * @created     :: 2014/08/20
  */
 
-define(['home/directives', 'bootstrapWysihtml5'], function (homeDirectives) {
+define(['home/directives', 'toastr', 'bootstrapWysihtml5'], function (homeDirectives, toastr) {
     'use strict';
 
     return homeDirectives
@@ -20,7 +20,9 @@ define(['home/directives', 'bootstrapWysihtml5'], function (homeDirectives) {
 
                     $scope.sendmail = function () {
                         $http.post('/sendmail', $scope.contactForm).success(function (data) {
-                            // TODO: show msg sent msg
+                            toastr.success('E-mail has been sent successfully!');
+                            $scope.contactForm = {};
+                            $('#contactMessage').val('');
                         });
                     };
                 }],
