@@ -1,91 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <title>Jeff Lee</title>
-
-    <link type="text/css" rel="stylesheet" href="styles/style.min.css" media="screen" />
-    <link type="text/css" rel="stylesheet" href="styles/print.min.css" media="print" />
-
-    <script src="js/vendor/jquery/dist/jquery.min.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+  <title>Jeff Lee</title>
+  <script src="https://use.fontawesome.com/516f97441c.js"></script>
 </head>
-
-<body class="backgrounded" data-spy="scroll" data-target=".sidebar-nav">
-    <div class="navbar navbar-fixed-top visible-phone noprint" id="phone-navbar">
-        <div class="navbar-inner">
-            <div class="container">
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>
-                <a class="brand" href="#">Jeff Lee</a>
-                <div class="nav-collapse collapse">
-                    <ul class="nav">
-                        <li><a href="#about" class="scroller">About me</a></li>
-                        <li><a href="#experiences" class="scroller">Experiences</a></li>
-                        <li><a href="#education" class="scroller">Education</a></li>
-                        <!-- <li><a href="#projects" class="scroller">Projects</a></li> -->
-                        <li><a href="#contact" class="scroller">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row" id="content">
-            <div class="span9 equal" id="main-content">
-                <div class="tools noprint visible-desktop">
-                    <a href="javascript:if(window.print)window.print()" title="Print" data-placement="bottom" class="tips glyphicons print"><i></i></a>
-                    <a href="#" title="Download" data-placement="bottom" class="tips glyphicons file_import"><i></i></a>
-                </div>
-
-                <about></about>
-                <experiences></experiences>
-                <education></education>
-                <!-- <projects></projects> -->
-                <contact></contact>
-            </div>
-
-            <div class="span3 sbright noprint" id="sidebar">
-                <div class="sidebar-nav equal hidden-phone">
-                    <ul class="nav nav-list affix" id="resumenav">
-                        <li><a href="#about" class="scroller">About me</a></li>
-                        <li><a href="#experiences" class="scroller">Experiences</a></li>
-                        <li><a href="#education" class="scroller">Education</a></li>
-                        <!-- <li><a href="#projects" class="scroller">Projects</a></li> -->
-                        <!-- <li><a href="#blog" class="scroller">Blog</a></li> -->
-                        <li><a href="#contact" class="scroller">Contact</a></li>
-                    </ul>
-                </div>
-                <span class="clear"></span>
-            </div>
-        </div><!--/row-->
-
-        <div id="footer">
-            <p>&copy; Jeff Lee - 2014</p>
-        </div>
-    </div>
-
-    <script src="js/vendor/requirejs/require.js" data-main="js/angular/home.min"></script>
-    <script src="js/script.js"></script>
-
-    <!-- Facebook Pixel Code -->
-    <script>
-    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-    document,'script','//connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '1479924872316601');
-    fbq('track', "PageView");</script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1479924872316601&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Facebook Pixel Code -->
+<body>
+  <div id="app"></div>
 </body>
 </html>
