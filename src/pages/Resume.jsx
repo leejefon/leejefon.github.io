@@ -2,7 +2,7 @@
  * Resume
  *
  * @author: Jeff Lee
- * @createdAt: 2017/06/14
+ * @createdAt: 2017/06/15
  */
 
 import React, { Component } from 'react';
