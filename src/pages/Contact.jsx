@@ -44,7 +44,7 @@ class Contact extends Component {
                     <i className="pe-7s-icon pe-7s-map-marker" />
                   </div>
                   <div className="ci-text">
-                    <h5>Los Angeles, USA</h5>
+                    <h5>San Jose, USA</h5>
                   </div>
                 </div>
                 <div className="contact-info-block">

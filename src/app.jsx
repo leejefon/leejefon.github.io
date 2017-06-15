@@ -17,6 +17,7 @@ import reducers from './reducers';
 import Home from './pages/Home';
 import About from './pages/About';
 import Resume from './pages/Resume';
+import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 import './css/main.scss';
@@ -36,7 +37,7 @@ ReactDOM.render(
             <Route location={location} exact path="/" component={Home} />
             <Route location={location} exact path="/about" component={About} />
             <Route location={location} exact path="/resume" component={Resume} />
-            <Route location={location} exact path="/projects" component={Home} />
+            <Route location={location} exact path="/projects" component={Projects} />
             <Route location={location} exact path="/contact" component={Contact} />
           </CSSTransitionGroup>
         )}

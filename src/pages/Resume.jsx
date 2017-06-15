@@ -7,6 +7,8 @@
 
 import React, { Component } from 'react';
 import App from './App';
+import Education from '../components/ResumeEducation';
+import Experience from '../components/ResumeExperience';
 
 class Resume extends Component {
   componentDidMount() {
@@ -35,55 +37,11 @@ class Resume extends Component {
 
             <div className="row">
               <div className="col-sm-6 col-md-4 subpage-block">
-                <div className="block-title">
-                  <h3>Education</h3>
-                </div>
-                <div className="timeline">
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">2010</h5>
-                    <h4 className="event-name">Specialization Course</h4>
-                    <span className="event-description">University of Studies</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">2009</h5>
-                    <h4 className="event-name">Specialization Course</h4>
-                    <span className="event-description">University of Studies</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">2008</h5>
-                    <h4 className="event-name">Specialization Course</h4>
-                    <span className="event-description">University of Studies</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                </div>
+                <Education />
               </div>
 
               <div className="col-sm-6 col-md-4 subpage-block">
-                <div className="block-title">
-                  <h3>Experience</h3>
-                </div>
-                <div className="timeline">
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">Dec 2012 - Current</h5>
-                    <h4 className="event-name">Frontend-developer</h4>
-                    <span className="event-description">Web Agency</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">Dec 2011 - Nov 2012</h5>
-                    <h4 className="event-name">Web Designer</h4>
-                    <span className="event-description">Apple Inc.</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                  <div className="timeline-event te-primary">
-                    <h5 className="event-date">Jan 2010 - Dec 2011</h5>
-                    <h4 className="event-name">Graphic Designer</h4>
-                    <span className="event-description">Web Agency</span>
-                    <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-                  </div>
-                </div>
+                <Experience />
               </div>
 
               <div className="col-sm-6 col-md-4 subpage-block">

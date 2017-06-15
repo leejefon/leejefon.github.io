@@ -8,8 +8,10 @@
 import React, { Component } from 'react';
 import Tilt from 'react-tilt';
 import App from './App';
-import Testimonials from '../components/Testimonials';
-import FunFacts from '../components/FunFacts';
+import Testimonials from '../components/AboutTestimonials';
+import FunFacts from '../components/AboutFunFacts';
+import Services from '../components/AboutServices';
+import Clients from '../components/AboutClients';
 
 class About extends Component {
   componentDidMount() {
@@ -69,94 +71,8 @@ class About extends Component {
               </div>
             </div>
 
-            <div className="block-title">
-              <h3>Services</h3>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-6 col-md-3 subpage-block">
-                <div className="service-block">
-                  <div className="service-info">
-                    <i className="service-icon pe-7s-icon pe-7s-browser" />
-                    <h4>Web Design</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block">
-                <div className="service-block">
-                  <div className="service-info">
-                    <i className="service-icon pe-7s-icon pe-7s-pen" />
-                    <h4>Copywriter</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block">
-                <div className="service-block">
-                  <div className="service-info">
-                    <i className="service-icon pe-7s-icon pe-7s-cart" />
-                    <h4>E-Commerce</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block">
-                <div className="service-block">
-                  <div className="service-info">
-                    <i className="service-icon pe-7s-icon pe-7s-graph1" />
-                    <h4>Marketing</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="block-title">
-              <h3>Clients</h3>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_1.png" alt="client" /></a>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_2.png" alt="client" /></a>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_3.png" alt="client" /></a>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_4.png" alt="client" /></a>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_5.png" alt="client" /></a>
-                </div>
-              </div>
-
-              <div className="col-sm-4 col-md-2 subpage-block">
-                <div className="client-block">
-                  <a href="#" target="_blank"><img src="images/clients/client_6.png" alt="client" /></a>
-                </div>
-              </div>
-            </div>
-
+            <Services />
+            <Clients />
             <Testimonials />
             <FunFacts />
           </div>
