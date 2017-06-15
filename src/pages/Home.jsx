@@ -11,9 +11,14 @@ import App from './App';
 
 class Home extends Component {
   componentDidMount() {
+    $('.pt-page').addClass('pt-page-current');
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
     });
+  }
+
+  componentWillUnmount() {
+    $('.pt-page').removeClass('pt-page-current');
   }
 
   render() {

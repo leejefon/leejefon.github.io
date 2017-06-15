@@ -14,7 +14,7 @@ class Testimonials extends Component {
       nav: true,
       items: 3,
       loop: false,
-      navText: false,
+      navText: [],
       margin: 10,
       responsive: {
         0: {

@@ -16,6 +16,7 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 import Home from './pages/Home';
 import About from './pages/About';
+import Resume from './pages/Resume';
 
 import './css/main.scss';
 
@@ -33,7 +34,7 @@ ReactDOM.render(
           >
             <Route location={location} key={location.key} exact path="/" component={Home} />
             <Route location={location} key={location.key} exact path="/about" component={About} />
-            <Route location={location} key={location.key} exact path="/resume" component={Home} />
+            <Route location={location} key={location.key} exact path="/resume" component={Resume} />
             <Route location={location} key={location.key} exact path="/projects" component={Home} />
             <Route location={location} key={location.key} exact path="/contact" component={Home} />
           </CSSTransitionGroup>

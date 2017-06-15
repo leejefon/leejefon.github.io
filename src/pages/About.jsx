@@ -13,9 +13,14 @@ import FunFacts from '../components/FunFacts';
 
 class About extends Component {
   componentDidMount() {
+    $('.pt-page').addClass('pt-page-current');
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
     });
+  }
+
+  componentWillUnmount() {
+    $('.pt-page').removeClass('pt-page-current');
   }
 
   render() {
