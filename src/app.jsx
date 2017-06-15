@@ -6,8 +6,9 @@
  */
 
 import React from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import ReactDOM from 'react-dom';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -22,15 +23,23 @@ const store = createStore(reducers, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
-    <HashRouter>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/resume" component={Home} />
-        <Route exact path="/projects" component={Home} />
-        <Route exact path="/contact" component={Home} />
-      </Switch>
-    </HashRouter>
+    <Router>
+      <Route
+        render={({ location }) => (
+          <CSSTransitionGroup
+            transitionName="fade"
+            transitionEnterTimeout={3000}
+            transitionLeaveTimeout={3000}
+          >
+            <Route location={location} key={location.key} exact path="/" component={Home} />
+            <Route location={location} key={location.key} exact path="/about" component={About} />
+            <Route location={location} key={location.key} exact path="/resume" component={Home} />
+            <Route location={location} key={location.key} exact path="/projects" component={Home} />
+            <Route location={location} key={location.key} exact path="/contact" component={Home} />
+          </CSSTransitionGroup>
+        )}
+      />
+    </Router>
   </Provider>,
   document.getElementById('app')
 );

@@ -2,7 +2,7 @@
  * Main CSS
  *
  * @author: Jeff Lee
- * @createdAt: 2017/06/09
+ * @createdAt: 2017/06/14
  */
 
 /* Do not write any CSS in here, add it to the appropriate module or make a new one and import it here */
@@ -17,3 +17,5 @@
 @import './unique/magnific-popup.css';
 @import './unique/pe-icon-7-stroke.css';
 @import './unique/main.css';
+
+@import './transition.scss';

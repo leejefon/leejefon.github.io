@@ -6,6 +6,7 @@
  */
 
 import React, { Component } from 'react';
+import { CSSTransitionGroup } from 'react-transition-group';
 import Nav from '../components/Nav';
 
 import '../css/main.scss';
@@ -18,86 +19,84 @@ class App extends Component {
         $('.preloader').fadeOut('slow');
       });
 
-      $(document).on('ready', () => {
-        // Initialize Portfolio grid
-        const $portfolio_container = $('#portfolio-grid');
+    $(document).on('ready', () => {
+      // Initialize Portfolio grid
+      $('#portfolio-grid').imagesLoaded(() => {
+        setTimeout(() => {
+          this.portfolioInit();
+        }, 500);
+      });
 
-        $portfolio_container.imagesLoaded(() => {
-          setTimeout(() => {
-            this.portfolio_init();
-          }, 500);
-        });
+      // Portfolio hover effect init
+      $('#portfolio_grid > figure > a').each(function x() { $(this).hoverdir(); });
 
-        // Portfolio hover effect init
-        $('#portfolio_grid > figure > a').each(function x() { $(this).hoverdir(); });
+      // Lightbox init
+      $('.lightbox').magnificPopup({
+        type: 'image',
+        removalDelay: 300,
 
-        // Lightbox init
-        $('.lightbox').magnificPopup({
-          type: 'image',
-          removalDelay: 300,
-
-          // Class that is added to popup wrapper and background
-          // make it unique to apply your CSS animations just to this exact popup
-          mainClass: 'mfp-fade',
-          image: {
-            // options for image content type
-            titleSrc: 'title',
-            gallery: {
-              enabled: true
-            }
-          },
-
-          iframe: {
-            markup: '<div class="mfp-iframe-scaler">' +
-                      '<div class="mfp-close"></div>' +
-                      '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
-                      '<div class="mfp-title mfp-bottom-iframe-title"></div>' +
-                    '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
-
-            patterns: {
-              youtube: {
-                index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
-
-                id: 'v=', // String that splits URL in a two parts, second part should be %id%
-                          // Or null - full URL will be returned
-                          // Or a function that should return %id%, for example:
-                          // id: function(url) { return 'parsed id'; }
-
-                src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
-              },
-              vimeo: {
-                index: 'vimeo.com/',
-                id: '/',
-                src: '//player.vimeo.com/video/%id%?autoplay=1'
-              },
-              gmaps: {
-                index: '//maps.google.',
-                src: '%id%&output=embed'
-              }
-            },
-
-            srcAction: 'iframe_src' // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
-          },
-
-          callbacks: {
-            markupParse: (template, values, item) => {
-              values.title = item.el.attr('title');
-            }
-          }
-        });
-
-        $('.ajax-page-load-link').magnificPopup({
-          type: 'ajax',
-          removalDelay: 300,
-          mainClass: 'mfp-fade',
+        // Class that is added to popup wrapper and background
+        // make it unique to apply your CSS animations just to this exact popup
+        mainClass: 'mfp-fade',
+        image: {
+          // options for image content type
+          titleSrc: 'title',
           gallery: {
             enabled: true
           }
-        });
+        },
+
+        iframe: {
+          markup: '<div class="mfp-iframe-scaler">' +
+                    '<div class="mfp-close"></div>' +
+                    '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+                    '<div class="mfp-title mfp-bottom-iframe-title"></div>' +
+                  '</div>', // HTML markup of popup, `mfp-close` will be replaced by the close button
+
+          patterns: {
+            youtube: {
+              index: 'youtube.com/', // String that detects type of video (in this case YouTube). Simply via url.indexOf(index).
+
+              id: 'v=', // String that splits URL in a two parts, second part should be %id%
+                        // Or null - full URL will be returned
+                        // Or a function that should return %id%, for example:
+                        // id: function(url) { return 'parsed id'; }
+
+              src: '//www.youtube.com/embed/%id%?autoplay=1' // URL that will be set as a source for iframe.
+            },
+            vimeo: {
+              index: 'vimeo.com/',
+              id: '/',
+              src: '//player.vimeo.com/video/%id%?autoplay=1'
+            },
+            gmaps: {
+              index: '//maps.google.',
+              src: '%id%&output=embed'
+            }
+          },
+
+          srcAction: 'iframe_src' // Templating object key. First part defines CSS selector, second attribute. "iframe_src" means: find "iframe" and set attribute "src".
+        },
+
+        callbacks: {
+          markupParse: (template, values, item) => {
+            values.title = item.el.attr('title');
+          }
+        }
       });
+
+      $('.ajax-page-load-link').magnificPopup({
+        type: 'ajax',
+        removalDelay: 300,
+        mainClass: 'mfp-fade',
+        gallery: {
+          enabled: true
+        }
+      });
+    });
   }
 
-  portfolio_init() {
+  portfolioInit() {
     const portfolioGrid = $('#portfolio_grid');
     const portfolioFilter = $('#portfolio_filters');
 
@@ -129,7 +128,15 @@ class App extends Component {
         <div id="main" className="site-main">
           <div className="pt-wrapper" style={{ backgroundImage: 'url(images/main_bg_light.jpg)' }}>
             <div className="subpages">
-              {this.props.children}
+              <CSSTransitionGroup
+                transitionName="fade"
+                transitionAppear
+                transitionAppearTimeout={800}
+                transitionEnter={false}
+                transitionLeave={false}
+              >
+                {this.props.children}
+              </CSSTransitionGroup>
             </div>
           </div>
         </div>
