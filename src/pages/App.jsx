@@ -153,9 +153,7 @@ class App extends Component {
           }
         });
 
-        $('.tilt-effect').tilt({
-
-        });
+        $('.tilt-effect').tilt();
       });
   }
 
