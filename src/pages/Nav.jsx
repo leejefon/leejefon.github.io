@@ -6,6 +6,7 @@
  */
 
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import Data from '../utils/Data';
 
@@ -25,19 +26,19 @@ class Nav extends Component {
           <div className="site-nav">
             <ul id="nav" className="site-main-menu">
               <li>
-                <a className="pt-trigger" href="#home" data-animation="21"><i className="menu-icon pe-7s-icon pe-7s-home" />Home</a>
+                <Link to="/"><i className="menu-icon pe-7s-icon pe-7s-home" />Home</Link>
               </li>
               <li>
-                <a className="pt-trigger" href="#about_me" data-animation="17"><i className="menu-icon pe-7s-icon pe-7s-user" />About me</a>
+                <Link to="/about"><i className="menu-icon pe-7s-icon pe-7s-user" />About me</Link>
               </li>
               <li>
-                <a className="pt-trigger" href="#resume" data-animation="18"><i className="menu-icon pe-7s-icon pe-7s-id" />Resume</a>
+                <Link to="/resume"><i className="menu-icon pe-7s-icon pe-7s-id" />Resume</Link>
               </li>
               <li>
-                <a className="pt-trigger" href="#portfolio" data-animation="19"><i className="menu-icon pe-7s-icon pe-7s-portfolio" />Portfolio</a>
+                <Link to="/projects"><i className="menu-icon pe-7s-icon pe-7s-portfolio" />Projects</Link>
               </li>
               <li>
-                <a className="pt-trigger" href="#contact" data-animation="20"><i className="menu-icon pe-7s-icon pe-7s-mail" />Contact</a>
+                <Link to="/contact"><i className="menu-icon pe-7s-icon pe-7s-mail" />Contact</Link>
               </li>
             </ul>
           </div>

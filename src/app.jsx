@@ -14,6 +14,7 @@ import thunk from 'redux-thunk';
 
 import reducers from './reducers';
 import Home from './pages/Home';
+import About from './pages/About';
 
 import './css/main.scss';
 
@@ -24,6 +25,10 @@ ReactDOM.render(
     <HashRouter>
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/resume" component={Home} />
+        <Route exact path="/projects" component={Home} />
+        <Route exact path="/contact" component={Home} />
       </Switch>
     </HashRouter>
   </Provider>,

@@ -11,7 +11,7 @@ module.exports = {
     port: 3000
   },
   entry: [
-    './src/main'
+    './src/app'
   ],
   output: {
     path: path.join(__dirname, 'dist'),
