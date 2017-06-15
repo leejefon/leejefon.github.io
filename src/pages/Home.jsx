@@ -6,6 +6,7 @@
  */
 
 import React, { Component } from 'react';
+import OwlCarousel from 'react-owl-carousel2';
 import App from './App';
 
 class Home extends Component {
@@ -13,9 +14,10 @@ class Home extends Component {
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
     });
+  }
 
-    // Text rotation
-    $('.text-rotation').owlCarousel({
+  render() {
+    const textRotationOptions = {
       loop: true,
       dots: false,
       nav: false,
@@ -23,27 +25,25 @@ class Home extends Component {
       items: 1,
       autoplay: true,
       autoplayHoverPause: false,
-      autoplayTimeout: 3800,
+      autoplayTimeout: 2500,
       animateOut: 'zoomOut',
       animateIn: 'zoomIn'
-    });
-  }
+    };
 
-  render() {
     return (
       <App>
         <section className="pt-page section-without-bg section-paddings-0 table">
           <div className="section-inner">
             <div className="home-page-block">
               <h2>Jeff Lee</h2>
-              <div className="owl-carousel text-rotation">
+              <OwlCarousel options={textRotationOptions}>
                 <div className="item">
                   <p className="home-page-description">Software Engineer</p>
                 </div>
                 <div className="item">
                   <p className="home-page-description">Backend Engineer</p>
                 </div>
-              </div>
+              </OwlCarousel>
             </div>
           </div>
         </section>

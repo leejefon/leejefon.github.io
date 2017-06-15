@@ -1511,19 +1511,19 @@ ul.social-links li:last-child a {
 8. Sliders
 ============================================================================= */
 /* Testimonials Carousel */
-.testimonials.owl-carousel .owl-nav {
+.testimonials .owl-nav {
   position: absolute;
   text-align: right;
   right: 0;
   top: -48px;
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev {
+.testimonials .owl-nav .owl-prev {
   margin-right: 3px;
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev,
-.testimonials.owl-carousel .owl-nav .owl-next {
+.testimonials .owl-nav .owl-prev,
+.testimonials .owl-nav .owl-next {
   display: inline-block;
   background-color: #eee;
   -webkit-transition: all 0.2s ease-in-out;
@@ -1533,14 +1533,14 @@ ul.social-links li:last-child a {
   transition: all 0.2s ease-in-out;
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:hover,
-.testimonials.owl-carousel .owl-nav .owl-next:hover {
+.testimonials .owl-nav .owl-prev:hover,
+.testimonials .owl-nav .owl-next:hover {
   color: #fff;
   background-color: #4d91de;
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:before,
-.testimonials.owl-carousel .owl-nav .owl-next:before {
+.testimonials .owl-nav .owl-prev:before,
+.testimonials .owl-nav .owl-next:before {
   position: relative;
   margin: 2px;
   width: 22px;
@@ -1553,11 +1553,11 @@ ul.social-links li:last-child a {
   cursor: pointer;
 }
 
-.testimonials.owl-carousel .owl-nav .owl-prev:before {
+.testimonials .owl-nav .owl-prev:before {
   content: "\f104";
 }
 
-.testimonials.owl-carousel .owl-nav .owl-next:before {
+.testimonials .owl-nav .owl-next:before {
   content: "\f105";
 }
 /* /Testimonials Carousel */

@@ -6,14 +6,13 @@
  */
 
 import React, { Component } from 'react';
+import Tilt from 'react-tilt';
 import { Link } from 'react-router-dom';
 
 import Data from '../utils/Data';
 
 class Nav extends Component {
   componentDidMount() {
-    $('.tilt-effect').tilt();
-
     $('#site_header').mCustomScrollbar({
       scrollInertia: 8
     });
@@ -42,9 +41,9 @@ class Nav extends Component {
     return (
       <div>
         <header id="site_header" className="header mobile-menu-hide header-color-light">
-          <div className="my-photo tilt-effect">
+          <Tilt className="my-photo">
             <img src={Data.avatar} alt="Me" />
-          </div>
+          </Tilt>
 
           <div className="site-title-block">
             <h1 className="site-title">Jeff Lee</h1>

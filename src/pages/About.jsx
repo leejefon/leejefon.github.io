@@ -6,40 +6,15 @@
  */
 
 import React, { Component } from 'react';
+import Tilt from 'react-tilt';
 import App from './App';
+import Testimonials from '../components/Testimonials';
+import FunFacts from '../components/FunFacts';
 
 class About extends Component {
   componentDidMount() {
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
-    });
-
-    $('.tilt-effect').tilt();
-
-    // Testimonials Slider
-    $('.testimonials.owl-carousel').owlCarousel({
-      nav: true, // Show next/prev buttons.
-      items: 3, // The number of items you want to see on the screen.
-      loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
-      navText: false,
-      margin: 10,
-      responsive: {
-        // breakpoint from 0 up
-        0: {
-          items: 1
-        },
-        // breakpoint from 480 up
-        480: {
-          items: 1
-        },
-        // breakpoint from 768 up
-        768: {
-          items: 2
-        },
-        1200: {
-          items: 3
-        }
-      }
     });
   }
 
@@ -58,9 +33,9 @@ class About extends Component {
 
             <div className="row">
               <div className="col-sm-6 col-md-6 col-lg-4 subpage-block">
-                <div className="my-photo-block tilt-effect">
+                <Tilt className="my-photo-block">
                   <img src="images/main_photo.jpg" alt="" />
-                </div>
+                </Tilt>
               </div>
 
               <div className="col-sm-6 col-md-6 col-lg-4">
@@ -177,103 +152,8 @@ class About extends Component {
               </div>
             </div>
 
-            <div className="row">
-              <div className="col-sm-12 col-md-12 subpage-block">
-                <div className="block-title">
-                  <h3>Testimonials</h3>
-                </div>
-                <div className="testimonials owl-carousel">
-                  <div className="testimonial-item">
-                    <div className="testimonial-content">
-                      <div className="testimonial-text">
-                        <p>"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."</p>
-                      </div>
-                    </div>
-                    <div className="testimonial-credits">
-                      <div className="testimonial-picture">
-                        <img src="images/testimonials/testimonial_photo_1.jpg" alt="" />
-                      </div>
-                      <div className="testimonial-author-info">
-                        <p className="testimonial-author">Maria Richardson</p>
-                        <p className="testimonial-firm">Lindsley's Lumber</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="testimonial-item">
-                    <div className="testimonial-content">
-                      <div className="testimonial-text">
-                        <p>"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi convallis eleifend nec ac lorem."</p>
-                      </div>
-                    </div>
-                    <div className="testimonial-credits">
-                      <div className="testimonial-picture">
-                        <img src="images/testimonials/testimonial_photo_2.jpg" alt="" />
-                      </div>
-                      <div className="testimonial-author-info">
-                        <p className="testimonial-author">John Doe</p>
-                        <p className="testimonial-firm">Apple Inc.</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="testimonial-item">
-                    <div className="testimonial-content">
-                      <div className="testimonial-text">
-                        <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."</p>
-                      </div>
-                    </div>
-                    <div className="testimonial-credits">
-                      <div className="testimonial-picture">
-                        <img src="images/testimonials/testimonial_photo_3.jpg" alt="" />
-                      </div>
-                      <div className="testimonial-author-info">
-                        <p className="testimonial-author">George McQueen</p>
-                        <p className="testimonial-firm">Harmony House</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="block-title">
-              <h3>Fun Facts</h3>
-            </div>
-
-            <div className="row">
-              <div className="col-sm-6 col-md-3 subpage-block">
-                <div className="fun-fact-block gray-bg tilt-effect">
-                  <i className="pe-7s-icon pe-7s-smile" />
-                  <h4>Happy Clients</h4>
-                  <span className="fun-value">1,024</span>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block tilt-effect">
-                <div className="fun-fact-block">
-                  <i className="pe-7s-icon pe-7s-alarm" />
-                  <h4>Working Hours</h4>
-                  <span className="fun-value">6,256</span>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block tilt-effect">
-                <div className="fun-fact-block gray-bg">
-                  <i className="pe-7s-icon pe-7s-medal" />
-                  <h4>Awards Won</h4>
-                  <span className="fun-value">21</span>
-                </div>
-              </div>
-
-              <div className="col-sm-6 col-md-3 subpage-block tilt-effect">
-                <div className="fun-fact-block">
-                  <i className="pe-7s-icon pe-7s-coffee" />
-                  <h4>Coffee Consumed</h4>
-                  <span className="fun-value">20,000</span>
-                </div>
-              </div>
-            </div>
+            <Testimonials />
+            <FunFacts />
           </div>
         </section>
       </App>
