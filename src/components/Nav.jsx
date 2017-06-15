@@ -11,6 +11,33 @@ import { Link } from 'react-router-dom';
 import Data from '../utils/Data';
 
 class Nav extends Component {
+  componentDidMount() {
+    $('.tilt-effect').tilt();
+
+    $('#site_header').mCustomScrollbar({
+      scrollInertia: 8
+    });
+
+    $('.menu-toggle').on('click', () => {
+      $('#site_header').toggleClass('mobile-menu-hide');
+    });
+
+    $('.site-main-menu').on('click', 'a', () => {
+      this.mobileMenuHide();
+    });
+
+    $(window).on('resize', () => {
+      this.mobileMenuHide();
+    });
+  }
+
+  mobileMenuHide() {
+    const windowWidth = $(window).width();
+    if (windowWidth < 1024) {
+      $('#site_header').addClass('mobile-menu-hide');
+    }
+  }
+
   render() {
     return (
       <div>

@@ -10,9 +10,22 @@ import App from './App';
 
 class Home extends Component {
   componentDidMount() {
-    // Custom Subpage Scroll
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
+    });
+
+    // Text rotation
+    $('.text-rotation').owlCarousel({
+      loop: true,
+      dots: false,
+      nav: false,
+      margin: 10,
+      items: 1,
+      autoplay: true,
+      autoplayHoverPause: false,
+      autoplayTimeout: 3800,
+      animateOut: 'zoomOut',
+      animateIn: 'zoomIn'
     });
   }
 

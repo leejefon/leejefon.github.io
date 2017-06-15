@@ -6,7 +6,7 @@
  */
 
 import React, { Component } from 'react';
-import Nav from './Nav';
+import Nav from '../components/Nav';
 
 import '../css/main.scss';
 
@@ -16,14 +16,6 @@ class App extends Component {
       .on('load', () => {
         // Animation on Page Loading
         $('.preloader').fadeOut('slow');
-
-        // Custom Header Scroll
-        $('#site_header').mCustomScrollbar({
-          scrollInertia: 8
-        });
-      })
-      .on('resize', () => {
-        this.mobileMenuHide();
       });
 
       $(document).on('ready', () => {
@@ -38,56 +30,6 @@ class App extends Component {
 
         // Portfolio hover effect init
         $('#portfolio_grid > figure > a').each(function x() { $(this).hoverdir(); });
-
-        // Mobile menu
-        $('.menu-toggle').on('click', () => {
-          $('#site_header').toggleClass('mobile-menu-hide');
-        });
-
-        // Mobile menu hide on main menu item click
-        $('.site-main-menu').on('click', 'a', () => {
-          this.mobileMenuHide();
-        });
-
-        // Testimonials Slider
-        $('.testimonials.owl-carousel').owlCarousel({
-          nav: true, // Show next/prev buttons.
-          items: 3, // The number of items you want to see on the screen.
-          loop: false, // Infinity loop. Duplicate last and first items to get loop illusion.
-          navText: false,
-          margin: 10,
-          responsive: {
-            // breakpoint from 0 up
-            0: {
-              items: 1
-            },
-            // breakpoint from 480 up
-            480: {
-              items: 1
-            },
-            // breakpoint from 768 up
-            768: {
-              items: 2
-            },
-            1200: {
-              items: 3
-            }
-          }
-        });
-
-        // Text rotation
-        $('.text-rotation').owlCarousel({
-          loop: true,
-          dots: false,
-          nav: false,
-          margin: 10,
-          items: 1,
-          autoplay: true,
-          autoplayHoverPause: false,
-          autoplayTimeout: 3800,
-          animateOut: 'zoomOut',
-          animateIn: 'zoomIn'
-        });
 
         // Lightbox init
         $('.lightbox').magnificPopup({
@@ -152,16 +94,7 @@ class App extends Component {
             enabled: true
           }
         });
-
-        $('.tilt-effect').tilt();
       });
-  }
-
-  mobileMenuHide() {
-    const windowWidth = $(window).width();
-    if (windowWidth < 1024) {
-      $('#site_header').addClass('mobile-menu-hide');
-    }
   }
 
   portfolio_init() {
