@@ -43,7 +43,11 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }, {
       test: /\.s?css$/,
-      loaders: ['style-loader', 'css-loader?module', 'sass-loader'],
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.join(__dirname, 'src')
+    }, {
+      test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      loader: 'file-loader',
       include: path.join(__dirname, 'src')
     }]
   },
