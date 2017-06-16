@@ -8,7 +8,9 @@
 import React, { Component } from 'react';
 import Tilt from 'react-tilt';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 
+import NavLink from './NavLink';
 import Data from '../utils/Data';
 
 class Nav extends Component {
@@ -25,9 +27,11 @@ class Nav extends Component {
       this.mobileMenuHide();
     });
 
-    $(window).on('resize', () => {
-      this.mobileMenuHide();
-    });
+    window.addEventListener('resize', this.mobileMenuHide.bind(this));
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.mobileMenuHide.bind(this));
   }
 
   mobileMenuHide() {
@@ -51,21 +55,11 @@ class Nav extends Component {
 
           <div className="site-nav">
             <ul id="nav" className="site-main-menu">
-              <li>
-                <Link to="/"><i className="menu-icon pe-7s-icon pe-7s-home" />Home</Link>
-              </li>
-              <li>
-                <Link to="/about"><i className="menu-icon pe-7s-icon pe-7s-user" />About me</Link>
-              </li>
-              <li>
-                <Link to="/resume"><i className="menu-icon pe-7s-icon pe-7s-id" />Resume</Link>
-              </li>
-              <li>
-                <Link to="/projects"><i className="menu-icon pe-7s-icon pe-7s-portfolio" />Projects</Link>
-              </li>
-              <li>
-                <Link to="/contact"><i className="menu-icon pe-7s-icon pe-7s-mail" />Contact</Link>
-              </li>
+              <NavLink to="/" icon="home">Home</NavLink>
+              <NavLink to="/about" icon="user">About Me</NavLink>
+              <NavLink to="/resume" icon="id">Resume</NavLink>
+              <NavLink to="/projects" icon="portfolio">Projects</NavLink>
+              <NavLink to="/contact" icon="mail">Contact</NavLink>
             </ul>
           </div>
         </header>

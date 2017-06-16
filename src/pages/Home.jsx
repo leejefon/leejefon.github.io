@@ -15,6 +15,10 @@ class Home extends Component {
     $('.pt-page').mCustomScrollbar({
       scrollInertia: 8
     });
+
+    // HACK: very ugly temporary solution for fixing owl carousel not aligned
+    $(window).on('resize', () => this.forceUpdate());
+    setTimeout(() => $(window).resize(), 0);
   }
 
   componentWillUnmount() {

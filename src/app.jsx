@@ -31,8 +31,9 @@ ReactDOM.render(
         render={({ location }) => (
           <CSSTransitionGroup
             transitionName="fade"
-            transitionEnterTimeout={3000}
-            transitionLeaveTimeout={3000}
+            transitionAppearTimeout={500}
+            transitionEnter={false}
+            transitionLeave={false}
           >
             <Route location={location} exact path="/" component={Home} />
             <Route location={location} exact path="/about" component={About} />
