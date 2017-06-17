@@ -7,6 +7,9 @@
 
 import React, { Component } from 'react';
 import Tilt from 'react-tilt';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Data from '../utils/Data';
 
 class FunFacts extends Component {
   render() {
@@ -16,39 +19,19 @@ class FunFacts extends Component {
           <h3>Fun Facts</h3>
         </div>
 
-        <div className="row">
-          <Tilt className="col-sm-6 col-md-3 subpage-block">
-            <div className="fun-fact-block gray-bg">
-              <i className="pe-7s-icon pe-7s-smile" />
-              <h4>Happy Clients</h4>
-              <span className="fun-value">1,024</span>
-            </div>
-          </Tilt>
-
-          <Tilt className="col-sm-6 col-md-3 subpage-block">
-            <div className="fun-fact-block">
-              <i className="pe-7s-icon pe-7s-alarm" />
-              <h4>Working Hours</h4>
-              <span className="fun-value">6,256</span>
-            </div>
-          </Tilt>
-
-          <Tilt className="col-sm-6 col-md-3 subpage-block">
-            <div className="fun-fact-block gray-bg">
-              <i className="pe-7s-icon pe-7s-medal" />
-              <h4>Awards Won</h4>
-              <span className="fun-value">21</span>
-            </div>
-          </Tilt>
-
-          <Tilt className="col-sm-6 col-md-3 subpage-block">
-            <div className="fun-fact-block">
-              <i className="pe-7s-icon pe-7s-coffee" />
-              <h4>Coffee Consumed</h4>
-              <span className="fun-value">20,000</span>
-            </div>
-          </Tilt>
-        </div>
+        <Row>
+          {Data.about.funFacts.map(fact => (
+            <Col sm={6} md={3} className="subpage-block" key={fact.title}>
+              <Tilt>
+                <div className="fun-fact-block gray-bg">
+                  <i className={`pe-7s-icon pe-7s-${fact.icon}`} />
+                  <h4>{fact.title}</h4>
+                  <span className="fun-value">{fact.value}</span>
+                </div>
+              </Tilt>
+            </Col>
+          ))}
+        </Row>
       </div>
     );
   }

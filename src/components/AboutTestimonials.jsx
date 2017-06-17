@@ -7,6 +7,9 @@
 
 import React, { Component } from 'react';
 import OwlCarousel from 'react-owl-carousel2';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Data from '../utils/Data';
 
 class Testimonials extends Component {
   render() {
@@ -33,83 +36,34 @@ class Testimonials extends Component {
     };
 
     return (
-      <div className="row">
-        <div className="col-sm-12 col-md-12 subpage-block">
+      <Row>
+        <Col sm={12} md={12} className="subpage-block">
           <div className="block-title">
             <h3>Testimonials</h3>
           </div>
 
           <OwlCarousel className="testimonials owl-carousel" options={testimonialCarouselOptions}>
-            <div className="testimonial-item">
-              <div className="testimonial-content">
-                <div className="testimonial-text">
-                  <p>"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."</p>
+            {Data.about.testimonials.map(testimonial => (
+              <div className="testimonial-item">
+                <div className="testimonial-content">
+                  <div className="testimonial-text">
+                    <p>{testimonial.text}</p>
+                  </div>
+                </div>
+                <div className="testimonial-credits">
+                  <div className="testimonial-picture">
+                    <img src={testimonial.image} alt="" />
+                  </div>
+                  <div className="testimonial-author-info">
+                    <p className="testimonial-author">{testimonial.name}</p>
+                    <p className="testimonial-firm">{testimonial.firm}</p>
+                  </div>
                 </div>
               </div>
-              <div className="testimonial-credits">
-                <div className="testimonial-picture">
-                  <img src="images/testimonials/testimonial_photo_1.jpg" alt="" />
-                </div>
-                <div className="testimonial-author-info">
-                  <p className="testimonial-author">Maria Richardson</p>
-                  <p className="testimonial-firm">Lindsley's Lumber</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-item">
-              <div className="testimonial-content">
-                <div className="testimonial-text">
-                  <p>"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi convallis eleifend nec ac lorem."</p>
-                </div>
-              </div>
-              <div className="testimonial-credits">
-                <div className="testimonial-picture">
-                  <img src="images/testimonials/testimonial_photo_2.jpg" alt="" />
-                </div>
-                <div className="testimonial-author-info">
-                  <p className="testimonial-author">John Doe</p>
-                  <p className="testimonial-firm">Apple Inc.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-item">
-              <div className="testimonial-content">
-                <div className="testimonial-text">
-                  <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."</p>
-                </div>
-              </div>
-              <div className="testimonial-credits">
-                <div className="testimonial-picture">
-                  <img src="images/testimonials/testimonial_photo_3.jpg" alt="" />
-                </div>
-                <div className="testimonial-author-info">
-                  <p className="testimonial-author">George McQueen</p>
-                  <p className="testimonial-firm">Harmony House</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-item">
-              <div className="testimonial-content">
-                <div className="testimonial-text">
-                  <p>"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."</p>
-                </div>
-              </div>
-              <div className="testimonial-credits">
-                <div className="testimonial-picture">
-                  <img src="images/testimonials/testimonial_photo_3.jpg" alt="" />
-                </div>
-                <div className="testimonial-author-info">
-                  <p className="testimonial-author">George McQueen</p>
-                  <p className="testimonial-firm">Harmony House</p>
-                </div>
-              </div>
-            </div>
+            ))}
           </OwlCarousel>
-        </div>
-      </div>
+        </Col>
+      </Row>
     );
   }
 }

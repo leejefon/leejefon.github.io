@@ -64,6 +64,54 @@ const data = {
         logo: 'images/clients/client_6.png',
         url: '#'
       }
+    ],
+    funFacts: [
+      {
+        title: 'Happy Clients',
+        icon: 'smile',
+        value: '1,024'
+      },
+      {
+        title: 'Working Hours',
+        icon: 'alarm',
+        value: '6,256'
+      },
+      {
+        title: 'Awards Won',
+        icon: 'medal',
+        value: '21'
+      },
+      {
+        title: 'Coffee Consumed',
+        icon: 'coffee',
+        value: '20,000'
+      }
+    ],
+    testimonials: [
+      {
+        name: 'Maria Richardson',
+        firm: 'Lindsley\'s Lumber',
+        text: '"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."',
+        image: 'images/testimonials/testimonial_photo_1.jpg'
+      },
+      {
+        name: 'John Doe',
+        firm: 'Apple Inc.',
+        text: '"Vivamus porta dapibus tristique. Suspendisse et arcu eget nisi convallis eleifend nec ac lorem."',
+        image: 'images/testimonials/testimonial_photo_2.jpg'
+      },
+      {
+        name: 'George McQueen',
+        firm: 'Harmony House',
+        text: '"Aliquam congue auctor lectus sed fermentum. Nulla ultricies tellus quis sapien lacinia egestas."',
+        image: 'images/testimonials/testimonial_photo_3.jpg'
+      },
+      {
+        name: 'JCK',
+        firm: 'Google Inc.',
+        text: '"Phasellus eu nunc tincidunt, ultricies elit vitae, pretium eros. Sed sed ipsum sed massa."',
+        image: 'images/testimonials/testimonial_photo_2.jpg'
+      }
     ]
   },
   experiences: [
