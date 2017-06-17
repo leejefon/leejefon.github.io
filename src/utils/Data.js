@@ -119,7 +119,7 @@ const data = {
       employer: 'Health IQ',
       position: 'Software Engineer',
       startTime: '2016/05',
-      endTime: '',
+      endTime: 'Current',
       blogUrl: '',
       details: [
         ''
@@ -129,20 +129,19 @@ const data = {
     {
       employer: 'Pnyks / DataWallet',
       position: 'Lead Engineer',
-      startTime: '',
-      endTime: '',
+      startTime: '2014/12',
+      endTime: '2015/12',
       blogUrl: '',
       details: [
         ''
       ],
-      references: [],
-      hide: true
+      references: []
     },
     {
       employer: 'TestLegends',
       position: 'Co-Founder and CTO',
-      startTime: '',
-      endTime: '',
+      startTime: '2014/03',
+      endTime: '2014/12',
       blogUrl: '',
       details: [
         ''
@@ -159,7 +158,8 @@ const data = {
       details: [
         'Worked on features for Packge Manage in Ruby on Rails'
       ],
-      references: []
+      references: [],
+      hide: true
     },
     {
       employer: 'Konrad Group',
@@ -172,7 +172,8 @@ const data = {
         'Contributed in building internal company portal website that manages info including projects, clients and company staffs in <b>.Net MVC</b>',
         'Occationally Help out other people on their projects, including feature implemenations and bug fixes'
       ],
-      references: []
+      references: [],
+      hide: true
     },
     {
       employer: 'Environment Canada',
@@ -185,7 +186,8 @@ const data = {
         'Implemented a web based data viewer and query API for large data',
         'Developed a web based management interface to manage metadata in XML format'
       ],
-      references: []
+      references: [],
+      hide: true
     }
   ],
   education: [

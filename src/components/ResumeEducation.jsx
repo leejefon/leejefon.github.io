@@ -6,6 +6,7 @@
  */
 
 import React, { Component } from 'react';
+import Data from '../utils/Data';
 
 class Education extends Component {
   render() {
@@ -15,24 +16,14 @@ class Education extends Component {
           <h3>Education</h3>
         </div>
         <div className="timeline">
-          <div className="timeline-event te-primary">
-            <h5 className="event-date">2010</h5>
-            <h4 className="event-name">Specialization Course</h4>
-            <span className="event-description">University of Studies</span>
-            <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-          </div>
-          <div className="timeline-event te-primary">
-            <h5 className="event-date">2009</h5>
-            <h4 className="event-name">Specialization Course</h4>
-            <span className="event-description">University of Studies</span>
-            <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-          </div>
-          <div className="timeline-event te-primary">
-            <h5 className="event-date">2008</h5>
-            <h4 className="event-name">Specialization Course</h4>
-            <span className="event-description">University of Studies</span>
-            <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
-          </div>
+          {Data.education.map(edu => (
+            <div className="timeline-event te-primary">
+              <h5 className="event-date">{edu.startTime} - {edu.endTime}</h5>
+              <h4 className="event-name">{edu.school}</h4>
+              <span className="event-description">{edu.degree}</span>
+              <p>Mauris magna sapien, pharetra consectetur fringilla vitae, interdum sed tortor.</p>
+            </div>
+          ))}
         </div>
       </div>
     );
