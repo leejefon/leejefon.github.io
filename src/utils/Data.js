@@ -7,10 +7,64 @@
 
 const data = {
   name: 'Jeff Lee',
+  title: ['Software Engineer', 'Full-Stack Engineer'],
   avatar: 'https://gravatar.com/avatar/9116994a95b11f219055306520647168?s=300',
-  bio: {
-    title: 'Software Engineer',
-    desc: ''
+  email: 'leejefon@gmail.com',
+  about: {
+    services: [
+      {
+        title: 'Web Design',
+        icon: 'browser',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+      },
+      {
+        title: 'Copywriter',
+        icon: 'pen',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+      },
+      {
+        title: 'E-Commerce',
+        icon: 'cart',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+      },
+      {
+        title: 'Marketing',
+        icon: 'graph1',
+        desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
+      }
+    ],
+    clients: [
+      {
+        name: 'Client 1',
+        logo: 'images/clients/client_1.png',
+        url: '#'
+      },
+      {
+        name: 'Client 2',
+        logo: 'images/clients/client_2.png',
+        url: '#'
+      },
+      {
+        name: 'Client 3',
+        logo: 'images/clients/client_3.png',
+        url: '#'
+      },
+      {
+        name: 'Client 4',
+        logo: 'images/clients/client_4.png',
+        url: '#'
+      },
+      {
+        name: 'Client 5',
+        logo: 'images/clients/client_5.png',
+        url: '#'
+      },
+      {
+        name: 'Client 6',
+        logo: 'images/clients/client_6.png',
+        url: '#'
+      }
+    ]
   },
   experiences: [
     {
@@ -212,17 +266,17 @@ const data = {
   ],
   social: [
     {
-      name: 'LinkedIn',
-      url: 'https://linkedin.com/in/leejefon',
-      icon: 'linkedin'
-    },
-    {
       name: 'GitHub',
       url: 'https://github.com/leejefon',
       icon: 'github'
     },
     {
-      name: 'GitHub',
+      name: 'LinkedIn',
+      url: 'https://linkedin.com/in/leejefon',
+      icon: 'linkedin'
+    },
+    {
+      name: 'Twitter',
       url: 'https://twitter.com/leejefon',
       icon: 'twitter'
     }

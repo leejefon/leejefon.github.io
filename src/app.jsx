@@ -6,9 +6,8 @@
  */
 
 import React from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -27,22 +26,13 @@ const store = createStore(reducers, applyMiddleware(thunk));
 ReactDOM.render(
   <Provider store={store}>
     <Router>
-      <Route
-        render={({ location }) => (
-          <CSSTransitionGroup
-            transitionName="fade"
-            transitionAppearTimeout={500}
-            transitionEnter={false}
-            transitionLeave={false}
-          >
-            <Route location={location} exact path="/" component={Home} />
-            <Route location={location} exact path="/about" component={About} />
-            <Route location={location} exact path="/resume" component={Resume} />
-            <Route location={location} exact path="/projects" component={Projects} />
-            <Route location={location} exact path="/contact" component={Contact} />
-          </CSSTransitionGroup>
-        )}
-      />
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/projects" component={Projects} />
+        <Route exact path="/contact" component={Contact} />
+      </Switch>
     </Router>
   </Provider>,
   document.getElementById('app')

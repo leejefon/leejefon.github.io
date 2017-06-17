@@ -8,6 +8,7 @@
 import React, { Component } from 'react';
 import OwlCarousel from 'react-owl-carousel2';
 import App from './App';
+import Data from '../utils/Data';
 
 class Home extends Component {
   componentDidMount() {
@@ -46,12 +47,11 @@ class Home extends Component {
             <div className="home-page-block">
               <h2>Jeff Lee</h2>
               <OwlCarousel options={textRotationOptions}>
-                <div className="item">
-                  <p className="home-page-description">Software Engineer</p>
-                </div>
-                <div className="item">
-                  <p className="home-page-description">Backend Engineer</p>
-                </div>
+                {Data.title.map(t => (
+                  <div className="item" key={t}>
+                    <p className="home-page-description">{t}</p>
+                  </div>
+                ))}
               </OwlCarousel>
             </div>
           </div>

@@ -6,6 +6,9 @@
  */
 
 import React, { Component } from 'react';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Data from '../utils/Data';
 
 class Clients extends Component {
   render() {
@@ -15,43 +18,17 @@ class Clients extends Component {
           <h3>Clients</h3>
         </div>
 
-        <div className="row">
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_1.png" alt="client" /></a>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_2.png" alt="client" /></a>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_3.png" alt="client" /></a>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_4.png" alt="client" /></a>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_5.png" alt="client" /></a>
-            </div>
-          </div>
-
-          <div className="col-sm-4 col-md-2 subpage-block">
-            <div className="client-block">
-              <a href="#" target="_blank"><img src="images/clients/client_6.png" alt="client" /></a>
-            </div>
-          </div>
-        </div>
+        <Row>
+          {Data.about.clients.map(client => (
+            <Col sm={4} md={2} className="subpage-block" key={client.name}>
+              <div className="client-block">
+                <a href={client.url} title={client.name} target="_blank">
+                  <img src={client.logo} alt={client.name} />
+                </a>
+              </div>
+            </Col>
+          ))}
+        </Row>
       </div>
     );
   }

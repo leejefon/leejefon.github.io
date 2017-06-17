@@ -14,6 +14,7 @@ class NavLink extends Component {
   render() {
     const currentRoute = this.context.router.route.match.url;
 
+    // TODO: disable current link
     return (
       <li className={classNames({ active: currentRoute === this.props.to })}>
         <Link to={this.props.to}>

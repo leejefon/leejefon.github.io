@@ -13,6 +13,8 @@ import FunFacts from '../components/AboutFunFacts';
 import Services from '../components/AboutServices';
 import Clients from '../components/AboutClients';
 
+import Data from '../utils/Data';
+
 class About extends Component {
   componentDidMount() {
     $('.pt-page').addClass('pt-page-current');
@@ -34,7 +36,7 @@ class About extends Component {
             <div className="section-title-block">
               <div className="section-title-wrapper clearfix">
                 <h2 className="section-title">About Me</h2>
-                <h5 className="section-description">Artist, Thinker, Creative Doer</h5>
+                <h5 className="section-description">{Data.title.join(', ')}</h5>
               </div>
             </div>
 
@@ -53,20 +55,18 @@ class About extends Component {
 
               <div className="col-sm-6 col-md-6 col-lg-4 subpage-block">
                 <ul className="info-list">
-                  <li><span className="title">Age</span><span className="value">29</span></li>
                   <li><span className="title">Residence</span><span className="value">Australia</span></li>
-                  <li><span className="title">Address</span><span className="value">88 Some Street, Some Town</span></li>
-                  <li><span className="title">e-mail</span><span className="value"><a href="mailto:email@example.com">email@example.com</a></span></li>
-                  <li><span className="title">Phone</span><span className="value">+0123 123 456 789</span></li>
-                  <li><span className="title">Freelance</span><span className="value available">Available</span></li>
+                  <li><span className="title">e-mail</span><span className="value"><a href={`mailto:${Data.email}`}>{Data.email}</a></span></li>
                 </ul>
 
                 <ul className="social-links">
-                  <li><a className="tip social-button" href="#" title="Twitter"><i className="fa fa-twitter" /></a></li>
-                  <li><a className="tip social-button" href="#" title="Facebook"><i className="fa fa-facebook" /></a></li>
-                  <li><a className="tip social-button" href="#" title="Google Plus"><i className="fa fa-google-plus" /></a></li>
-                  <li><a className="tip social-button" href="#" title="Youtube"><i className="fa fa-youtube" /></a></li>
-                  <li><a className="tip social-button" href="#" title="Instagram"><i className="fa fa-instagram" /></a></li>
+                  {Data.social.map(media => (
+                    <li key={media.name}>
+                      <a className="tip social-button" href={media.url} title={media.name}>
+                        <i className={`fa fa-${media.icon}`} />
+                      </a>
+                    </li>
+                  ))}
                 </ul>
               </div>
             </div>

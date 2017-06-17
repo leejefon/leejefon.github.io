@@ -6,6 +6,9 @@
  */
 
 import React, { Component } from 'react';
+import Row from 'react-bootstrap/lib/Row';
+import Col from 'react-bootstrap/lib/Col';
+import Data from '../utils/Data';
 
 class Services extends Component {
   render() {
@@ -15,47 +18,19 @@ class Services extends Component {
           <h3>Services</h3>
         </div>
 
-        <div className="row">
-          <div className="col-sm-6 col-md-3 subpage-block">
-            <div className="service-block">
-              <div className="service-info">
-                <i className="service-icon pe-7s-icon pe-7s-browser" />
-                <h4>Web Design</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
+        <Row>
+          {Data.about.services.map(service => (
+            <Col sm={6} md={3} className="subpage-block" key={service.title}>
+              <div className="service-block">
+                <div className="service-info">
+                  <i className={`service-icon pe-7s-icon pe-7s-${service.icon}`} />
+                  <h4>{service.title}</h4>
+                  <p>{service.desc}</p>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6 col-md-3 subpage-block">
-            <div className="service-block">
-              <div className="service-info">
-                <i className="service-icon pe-7s-icon pe-7s-pen" />
-                <h4>Copywriter</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6 col-md-3 subpage-block">
-            <div className="service-block">
-              <div className="service-info">
-                <i className="service-icon pe-7s-icon pe-7s-cart" />
-                <h4>E-Commerce</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-              </div>
-            </div>
-          </div>
-
-          <div className="col-sm-6 col-md-3 subpage-block">
-            <div className="service-block">
-              <div className="service-info">
-                <i className="service-icon pe-7s-icon pe-7s-graph1" />
-                <h4>Marketing</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.</p>
-              </div>
-            </div>
-          </div>
-        </div>
+            </Col>
+          ))}
+        </Row>
       </div>
     );
   }
