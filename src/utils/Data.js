@@ -33,34 +33,34 @@ const data = {
         desc: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor.'
       }
     ],
-    clients: [
+    certifications: [ // Certificates
       {
-        name: 'Client 1',
+        name: 'Certificate 1',
         logo: 'images/clients/client_1.png',
         url: '#'
       },
       {
-        name: 'Client 2',
+        name: 'Certificate 2',
         logo: 'images/clients/client_2.png',
         url: '#'
       },
       {
-        name: 'Client 3',
+        name: 'Certificate 3',
         logo: 'images/clients/client_3.png',
         url: '#'
       },
       {
-        name: 'Client 4',
+        name: 'Certificate 4',
         logo: 'images/clients/client_4.png',
         url: '#'
       },
       {
-        name: 'Client 5',
+        name: 'Certificate 5',
         logo: 'images/clients/client_5.png',
         url: '#'
       },
       {
-        name: 'Client 6',
+        name: 'Certificate 6',
         logo: 'images/clients/client_6.png',
         url: '#'
       }
@@ -122,7 +122,8 @@ const data = {
       endTime: 'Current',
       blogUrl: '',
       details: [
-        ''
+        'Worked with marketing team on different landing pages to drive more leads in the first 6 months',
+        'Started working more on internal tools integrated with Saleforce, such as custom SMS chat tool, Universal app for client applications, using React and Salesforce APEX'
       ],
       references: []
     },
@@ -133,7 +134,12 @@ const data = {
       endTime: '2015/12',
       blogUrl: '',
       details: [
-        ''
+        'DataWallet is a data marketplace for users to sell their own data online, and companies can purchase data from our platform for market research purpose, for instance.',
+        'Received funding from Tim Draper, founder of DFJ, and Marc Benioff, CEO of Salesforce',
+        'One of the 14 startups in Alchemist Accelerator class 10, attended serveral events during the 6-month program, and got connected to many VCs after the demo day',
+        'Designed data sourcing modules to get user data from different sources',
+        'Implemented user and enterprise platforms with API archiecture authenticated with OAuth in Node.js, including a subset of public APIs for external developers to analyze the data',
+        'Managed and worked together with a team of contract front-end developers and data scientists'
       ],
       references: []
     },
@@ -144,7 +150,11 @@ const data = {
       endTime: '2014/12',
       blogUrl: '',
       details: [
-        ''
+        // 'TestLegends aism '
+        'Received funding from Tim Draper, founder of DFJ, and BoostVC, a seed-stage accelerator',
+        'Developed a platform for users to create or import content from Quizlet and learn by playing games',
+        'Designed an API archiecture with OAuth authentication for developers to develop on the TestLegends platform',
+        'Worked with Versal, an education platform, and created a TestLegends gadget for their platform'
       ],
       references: [],
       hide: true
@@ -156,7 +166,10 @@ const data = {
       endTime: '2014/03',
       blogUrl: '',
       details: [
-        'Worked on features for Packge Manage in Ruby on Rails'
+        'Worked on features for Packge Manage in Ruby on Rails',
+        'Full test driven development, used RSpec for unit testing and Capybara for acceptance test',
+        'Pair programming with different team members serveral times in a day',
+        'Learned design patterns, code refactoring, and advanced git flow from senior developers'
       ],
       references: [],
       hide: true

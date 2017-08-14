@@ -7,6 +7,7 @@
 
 import React, { Component } from 'react';
 import App from './App';
+import Data from '../utils/Data';
 
 class Contact extends Component {
   componentDidMount() {
@@ -52,7 +53,7 @@ class Contact extends Component {
                     <i className="pe-7s-icon pe-7s-mail" />
                   </div>
                   <div className="ci-text">
-                    <h5>alexsmith@example.com</h5>
+                    <h5>{Data.email}</h5>
                   </div>
                 </div>
                 <div className="contact-info-block">

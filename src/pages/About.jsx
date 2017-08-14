@@ -11,7 +11,7 @@ import App from './App';
 import Testimonials from '../components/AboutTestimonials';
 import FunFacts from '../components/AboutFunFacts';
 import Services from '../components/AboutServices';
-import Clients from '../components/AboutClients';
+import Certificates from '../components/AboutCertificates';
 
 import Data from '../utils/Data';
 
@@ -72,7 +72,7 @@ class About extends Component {
             </div>
 
             <Services />
-            <Clients />
+            <Certificates />
             <Testimonials />
             <FunFacts />
           </div>
