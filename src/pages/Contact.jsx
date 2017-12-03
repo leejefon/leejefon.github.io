@@ -61,7 +61,7 @@ class Contact extends Component {
                     <i className="pe-7s-icon pe-7s-call" />
                   </div>
                   <div className="ci-text">
-                    <h5>+123 654 78900</h5>
+                    <h5>{Data.phone}</h5>
                   </div>
                 </div>
                 <div className="contact-info-block">

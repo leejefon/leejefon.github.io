@@ -10,6 +10,7 @@ const data = {
   title: ['Software Engineer', 'Full-Stack Engineer'],
   avatar: 'https://gravatar.com/avatar/9116994a95b11f219055306520647168?s=300',
   email: 'leejefon@gmail.com',
+  phone: '(650) 267-0781',
   about: {
     services: [
       {
@@ -35,33 +36,93 @@ const data = {
     ],
     certifications: [ // Certificates
       {
-        name: 'Certificate 1',
+        name: 'Cisco Certified Network Associate (CCNA)',
         logo: 'images/clients/client_1.png',
         url: '#'
       },
       {
-        name: 'Certificate 2',
+        name: 'CIW Certified Web Development Professional',
         logo: 'images/clients/client_2.png',
         url: '#'
       },
       {
-        name: 'Certificate 3',
+        name: 'CIW Certified Web Design Professional',
         logo: 'images/clients/client_3.png',
         url: '#'
       },
       {
-        name: 'Certificate 4',
+        name: 'CIW Certified Web Security Professional',
         logo: 'images/clients/client_4.png',
         url: '#'
       },
       {
-        name: 'Certificate 5',
+        name: 'CompTIA A+',
         logo: 'images/clients/client_5.png',
         url: '#'
       },
       {
-        name: 'Certificate 6',
-        logo: 'images/clients/client_6.png',
+        name: 'CompTIA Linux+',
+        logo: 'images/clients/client_1.png',
+        url: '#'
+      },
+      {
+        name: 'CompTIA Network+',
+        logo: 'images/clients/client_2.png',
+        url: '#'
+      },
+      {
+        name: 'CompTIA Security+',
+        logo: 'images/clients/client_3.png',
+        url: '#'
+      },
+      {
+        name: 'Microsoft Certified IT Professional (MCITP) - Database Administrator 2008',
+        logo: 'images/clients/client_4.png',
+        url: '#'
+      },
+      {
+        name: 'Microsoft Certified IT Professional',
+        logo: 'images/clients/client_5.png',
+        url: '#'
+      },
+      {
+        name: 'Microsoft Certified Technology Specialist (MCTS) in Business Desktop Deployment',
+        logo: 'images/clients/client_1.png',
+        url: '#'
+      },
+      {
+        name: 'Microsoft Certified Technology Specialist (MCTS) in SQL Server 2008 Implementation and Maintenance',
+        logo: 'images/clients/client_2.png',
+        url: '#'
+      },
+      {
+        name: 'Microsoft Certified Technology Specialist',
+        logo: 'images/clients/client_3.png',
+        url: '#'
+      },
+      {
+        name: 'Oracle Certified Professional, Java Standard Edition 6 Programmer (former SCJP)',
+        logo: 'images/clients/client_4.png',
+        url: '#'
+      },
+      {
+        name: 'Zend Certified Engineer (ZCE) in PHP 5.3',
+        logo: 'images/clients/client_5.png',
+        url: '#'
+      },
+      {
+        name: 'IBM DB2 Essential Training I Completion',
+        logo: 'images/clients/client_5.png',
+        url: '#'
+      },
+      {
+        name: 'Japanese Language Proficiency Test (JLPT) N3',
+        logo: 'images/clients/client_5.png',
+        url: '#'
+      },
+      {
+        name: 'Life-Only Agent and Accident and Health Agent License',
+        logo: 'images/clients/client_5.png',
         url: '#'
       }
     ],
@@ -123,7 +184,8 @@ const data = {
       blogUrl: '',
       details: [
         'Worked with marketing team on different landing pages to drive more leads in the first 6 months',
-        'Started working more on internal tools integrated with Saleforce, such as custom SMS chat tool, Universal app for client applications, using React and Salesforce APEX'
+        'Started working more on internal tools integrated with Saleforce, such as custom SMS chat tool, Universal app for client applications, using React and Salesforce APEX',
+        'Wrote several scripts in node.js to help automate mapping for large amount of client information to third party form generator.  Project involves a lot of load balancing and smart string matching'
       ],
       references: []
     },
@@ -269,62 +331,6 @@ const data = {
     {
       name: 'Interview Questions with TypeScript',
       readme: 'https://github.com/leejefon/interview-with-javascript/blob/master/README.md'
-    }
-  ],
-  certifications: [
-    {
-      name: 'Cisco Certified Network Associate (CCNA)'
-    },
-    {
-      name: 'CIW Certified Web Development Professional'
-    },
-    {
-      name: 'CIW Certified Web Design Professional'
-    },
-    {
-      name: 'CIW Certified Web Security Professional'
-    },
-    {
-      name: 'CompTIA A+'
-    },
-    {
-      name: 'CompTIA Linux+'
-    },
-    {
-      name: 'CompTIA Network+'
-    },
-    {
-      name: 'CompTIA Security+'
-    },
-    {
-      name: 'Microsoft Certified IT Professional (MCITP) - Database Administrator 2008'
-    },
-    {
-      name: 'Microsoft Certified IT Professional'
-    },
-    {
-      name: 'Microsoft Certified Technology Specialist (MCTS) in Business Desktop Deployment'
-    },
-    {
-      name: 'Microsoft Certified Technology Specialist (MCTS) in SQL Server 2008 Implementation and Maintenance'
-    },
-    {
-      name: 'Microsoft Certified Technology Specialist'
-    },
-    {
-      name: 'Oracle Certified Professional, Java Standard Edition 6 Programmer (former SCJP)'
-    },
-    {
-      name: 'Zend Certified Engineer (ZCE) in PHP 5.3'
-    },
-    {
-      name: 'IBM DB2 Essential Training I Completion'
-    },
-    {
-      name: 'Japanese Language Proficiency Test (JLPT) N3'
-    },
-    {
-      name: 'Life-Only Agent and Accident and Health Agent License'
     }
   ],
   social: [

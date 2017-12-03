@@ -43,7 +43,6 @@ module.exports = (() => {
   }
 
   return {
-    devtool: 'source-map',
     devServer: {
       contentBase: path.join(__dirname, './dist'),
       compress: true,
@@ -57,7 +56,9 @@ module.exports = (() => {
       path: path.join(__dirname, 'dist'),
       filename: 'app.js'
     },
-    plugins,
+    resolve: {
+      extensions: ['.js', '.jsx']
+    },
     module: {
       rules: [{
         test: /\.jsx?$/,
@@ -73,8 +74,6 @@ module.exports = (() => {
         include: path.join(__dirname, 'src')
       }]
     },
-    resolve: {
-      extensions: ['.js', '.jsx']
-    }
+    plugins
   };
 });
