@@ -1,10 +1,34 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
-module.exports = (() => {
-  const plugins = [
+module.exports = {
+  entry: [
+    './src/app'
+  ],
+  output: {
+    path: path.join(__dirname, 'dist'),
+    filename: 'app.js'
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
+  },
+  module: {
+    rules: [{
+      test: /\.jsx?$/,
+      loaders: ['babel-loader'],
+      include: path.join(__dirname, 'src')
+    }, {
+      test: /\.s?css$/,
+      loaders: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.join(__dirname, 'src')
+    }, {
+      test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
+      loader: 'file-loader',
+      include: path.join(__dirname, 'src')
+    }]
+  },
+  plugins: [
     new HtmlWebpackPlugin({
       template: './index.html',
       inject: 'body',
@@ -24,56 +48,5 @@ module.exports = (() => {
     new CopyWebpackPlugin([{
       from: 'assets'
     }])
-  ];
-
-  if (process.env.NODE_ENV === 'production') {
-    plugins.unshift(
-      // TODO: these plugins are removed from webpack, need new libs
-      // new webpack.optimize.DedupePlugin(),
-      // new webpack.optimize.UglifyJsPlugin({
-      //   sourcemap: false,
-      //   comments: false,
-      //   compress: {
-      //     warnings: false
-      //   }
-      // })
-    );
-  } else {
-    plugins.unshift(new webpack.HotModuleReplacementPlugin());
-  }
-
-  return {
-    devServer: {
-      contentBase: path.join(__dirname, './dist'),
-      compress: true,
-      hot: true,
-      port: 3000
-    },
-    entry: [
-      './src/app'
-    ],
-    output: {
-      path: path.join(__dirname, 'dist'),
-      filename: 'app.js'
-    },
-    resolve: {
-      extensions: ['.js', '.jsx']
-    },
-    module: {
-      rules: [{
-        test: /\.jsx?$/,
-        loaders: ['babel-loader'],
-        include: path.join(__dirname, 'src')
-      }, {
-        test: /\.s?css$/,
-        loaders: ['style-loader', 'css-loader', 'sass-loader'],
-        include: path.join(__dirname, 'src')
-      }, {
-        test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        loader: 'file-loader',
-        include: path.join(__dirname, 'src')
-      }]
-    },
-    plugins
-  };
-});
+  ]
+};
