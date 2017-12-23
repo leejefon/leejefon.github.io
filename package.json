@@ -9,7 +9,7 @@
     "url": "https://github.com/leejefon/leejefon.github.io"
   },
   "engines": {
-    "node": "6.x"
+    "node": "8.x"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -46,11 +46,11 @@
     "node-sass": "^4.7.2",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "scripts": {
-    "start": "webpack --progress --colors --watch",
-    "watch": "webpack --progress --colors --watch",
+    "start": "webpack-dev-server --colors --hot",
     "build": "webpack --progress --colors",
     "lint": "eslint --ext .js --ext .jsx src"
   }

@@ -35260,7 +35260,8 @@ function (_Component) {
         options: testimonialCarouselOptions
       }, _Data.default.about.testimonials.map(function (testimonial) {
         return _react.default.createElement("div", {
-          className: "testimonial-item"
+          className: "testimonial-item",
+          key: testimonial.text
         }, _react.default.createElement("div", {
           className: "testimonial-content"
         }, _react.default.createElement("div", {

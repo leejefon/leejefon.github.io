@@ -44,7 +44,7 @@ class Testimonials extends Component {
 
           <OwlCarousel className="testimonials owl-carousel" options={testimonialCarouselOptions}>
             {Data.about.testimonials.map(testimonial => (
-              <div className="testimonial-item">
+              <div className="testimonial-item" key={testimonial.text}>
                 <div className="testimonial-content">
                   <div className="testimonial-text">
                     <p>{testimonial.text}</p>
