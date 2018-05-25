@@ -3,9 +3,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: [
-    './src/app'
-  ],
+  mode: process.env.NODE_ENV || 'development',
+  entry: './src/app',
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'app.js'
@@ -55,3 +54,6 @@ module.exports = {
     port: 3000
   }
 };
+//
+// "webpack": "^3.12.0",
+// "webpack-dev-server": "^2.9.7"
