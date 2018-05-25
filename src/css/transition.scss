@@ -1,0 +1,16 @@
+/*
+ * Transition CSS
+ *
+ * @author: Jeff Lee
+ * @createdAt: 2017/06/14
+ * @source: https://reacttraining.com/react-router/web/example/animated-transitions
+ */
+
+ .fade-appear {
+   opacity: 0.01;
+ }
+
+ .fade-appear.fade-appear-active {
+   opacity: 1;
+   transition: opacity 800ms ease-in;
+ }
