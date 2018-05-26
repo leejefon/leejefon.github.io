@@ -1,10 +1,4 @@
 My Home Page
 ============
 
-### To Fix:
-- Resume skill percentage not animated
-- Page transition not animated
-
-### To Improve:
-- Shuffle use react component
-- Eventually remove jQuery
+v4 - Clean (but still uses react)
