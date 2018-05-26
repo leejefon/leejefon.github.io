@@ -2,44 +2,20 @@
  * App
  *
  * @author: Jeff Lee
- * @createdAt: 2017/06/14
+ * @createdAt: 2018/05/26
  */
 
 import React, { Component } from 'react';
-import { CSSTransitionGroup } from 'react-transition-group';
-import Nav from '../components/Nav';
 
-import '../css/main.scss';
+import styles from '../css/main.scss';
 
 class App extends Component {
-  componentDidMount() {
-    $(window)
-      .on('load', () => {
-        // Animation on Page Loading
-        $('.preloader').fadeOut('slow');
-      });
-  }
-
   render() {
+    // const gravatarUrl = 'https://gravatar.com/avatar/9116994a95b11f219055306520647168?s=120';
     return (
-      <div id="page" className="page">
-        <Nav />
-
-        <div id="main" className="site-main">
-          <div className="pt-wrapper" style={{ backgroundImage: 'url(images/main_bg_light.jpg)' }}>
-            <div className="subpages">
-              <CSSTransitionGroup
-                transitionName="fade"
-                transitionAppear
-                transitionAppearTimeout={800}
-                transitionEnter={false}
-                transitionLeave={false}
-              >
-                {this.props.children}
-              </CSSTransitionGroup>
-            </div>
-          </div>
-        </div>
+      <div className={`${styles.main} bg-light d-flex flex-column align-items-center justify-content-center p2`}>
+        <h1 className="font-weight-bold text-secondary">Jeff Lee</h1>
+        <h2 className="font-weight-light text-secondary">Software Engineer</h2>
       </div>
     );
   }

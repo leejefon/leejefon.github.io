@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
@@ -19,17 +18,13 @@ module.exports = {
       include: path.join(__dirname, 'src')
     }, {
       test: /\.s?css$/,
-      loaders: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.join(__dirname, 'src')
-    }, {
-      test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-      loader: 'file-loader',
+      loaders: ['style-loader', 'css-loader?module', 'sass-loader'],
       include: path.join(__dirname, 'src')
     }]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './index.html',
+      template: './src/index.html',
       inject: 'body',
       minify: {
         removeComments: true,
@@ -43,10 +38,7 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true
       }
-    }),
-    new CopyWebpackPlugin([{
-      from: 'assets'
-    }])
+    })
   ],
   devServer: {
     contentBase: path.join(__dirname, '.'),
@@ -54,6 +46,3 @@ module.exports = {
     port: 3000
   }
 };
-//
-// "webpack": "^3.12.0",
-// "webpack-dev-server": "^2.9.7"
