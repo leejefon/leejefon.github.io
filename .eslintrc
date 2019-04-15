@@ -12,13 +12,7 @@
       "ignoreTemplateLiterals": true
     }],
     "no-console": "warn",
-    "class-methods-use-this": "warn",
-    "react/forbid-prop-types": "warn",
-    "react/no-unescaped-entities": "off",
-    "react/prefer-stateless-function": "off",
-    "react/require-default-props": "off",
-    // Very weird bug from eslint, for propTypes used in componentWillReceiveProps, if add proptypes it says unused, if not it says missing
-    "react/prop-types": "off"
+    "react/prefer-stateless-function": "off"
   },
   "globals": {
     "document": true

@@ -7,7 +7,7 @@
 
 import React, { Component } from 'react';
 
-import styles from '../css/main.scss';
+import '../css/main.scss';
 
 class App extends Component {
   render() {
@@ -15,29 +15,34 @@ class App extends Component {
     const socialMedia = [
       {
         name: 'GitHub',
-        icon: 'github',
+        icon: 'fab fa-github',
         url: 'https://github.com/leejefon'
       },
       {
         name: 'LinkedIn',
-        icon: 'linkedin',
+        icon: 'fab fa-linkedin',
         url: 'https://linkedin.com/in/leejefon'
       },
       {
         name: 'Twitter',
-        icon: 'twitter',
+        icon: 'fab fa-twitter',
         url: 'https://twitter.com/leejefon'
+      },
+      {
+        name: 'Resume',
+        icon: 'fas fa-file-pdf',
+        url: '/Resume.pdf'
       }
     ];
 
     return (
-      <div className={`${styles.main} bg-light d-flex flex-column align-items-center justify-content-center p-2`}>
-        <h1 className="font-weight-bold text-secondary">Jeff Lee</h1>
-        <h2 className="font-weight-light text-secondary">Software Engineer</h2>
+      <div className="vh-100 bg-light d-flex flex-column justify-content-center text-center text-secondary p-2">
+        <h1 className="font-weight-bold">Jeff Lee</h1>
+        <h2 className="font-weight-light">Software Engineer</h2>
         <h3 className="mt-2">
           {socialMedia.map(s => (
             <a href={s.url} title={s.name} key={s.name} className="text-secondary mr-3">
-              <i className={`fab fa-${s.icon}`} />
+              <i className={s.icon} />
             </a>
           ))}
         </h3>
