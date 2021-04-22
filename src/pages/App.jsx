@@ -7,8 +7,6 @@
 
 import React, { Component } from 'react';
 
-import '../css/main.scss';
-
 class App extends Component {
   render() {
     // const gravatarUrl = 'https://gravatar.com/avatar/9116994a95b11f219055306520647168?s=120';
@@ -36,7 +34,7 @@ class App extends Component {
     ];
 
     return (
-      <div className="vh-100 bg-light d-flex flex-column justify-content-center text-center text-secondary p-2">
+      <div className="vh-100 bg-light d-flex flex-column justify-content-center text-center text-secondary p-2" style={{ fontFamily: 'Montserrat' }}>
         <h1 className="font-weight-bold">Jeff Lee</h1>
         <h2 className="font-weight-light">Software Engineer</h2>
         <h3 className="mt-2">
